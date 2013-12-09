@@ -11,3 +11,5 @@ Template Name Posts: Home
 <div id="home_page">
 	<img class="home_image" src="<?php the_field('home_image'); ?>">
 </div>
+
+<!-- hahahahahahahaha -->
