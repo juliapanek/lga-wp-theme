@@ -21,7 +21,7 @@ Template Name Posts: Home
 <div id="index_content">
 	<div class="index_container">
 <?php 
-		$q = new WP_Query("p=791");
+		$q = new WP_Query("p=54");
 			if ($q->have_posts() ) {
 				$q->the_post();
 				$img = get_field('home_image');
