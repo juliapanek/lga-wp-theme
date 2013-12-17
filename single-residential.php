@@ -11,7 +11,7 @@ Template Name Posts: Project
 <?php get_footer(); ?>
 
 <div id="main_content">
-	<img class="logo_left" src="/wp-content/themes/lga/img/leslie-gill.png" alt="leslie gill architect">
+	<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
 	<div class="main_container">
 
 <?php 	$attachment = get_post( get_field('image') ); 
@@ -30,7 +30,7 @@ Template Name Posts: Project
 
 <!-- add conditional to display/not display #side_content -->
 <div id="side_content">
-	<img class="logo_right" src="/wp-content/themes/lga/img/architect.png" alt="leslie gill architect">
+	<img class="logo_right" src="<?php bloginfo('template_directory'); ?>/img/architect.png" alt="leslie gill architect">
 	<div class="side_container">
 		<!-- add conditional to display/not display .title --> 
 		<p class="title"><?php the_field('name'); ?></p>

@@ -5,6 +5,6 @@
 	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 	<meta name="Leslie Gill Architect" content="Leslie Gill Architect is a New York City-based design and architecture firm">  
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/reset.css" type="text/css"> 
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/reset.css" type="text/css"> 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">  
 </head>

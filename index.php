@@ -11,11 +11,11 @@ Template Name Posts: Home
 <?php get_footer(); ?>
 
 <div id="main_content">
-	<img class="logo_left" src="/wp-content/themes/lga/img/leslie-gill.png" alt="leslie gill architect">
+	<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
 </div> 
 
 <div id="side_content">
-	<img class="logo_right" src="/wp-content/themes/lga/img/architect.png" alt="leslie gill architect">
+	<img class="logo_right" src="<?php bloginfo('template_directory'); ?>/img/architect.png" alt="leslie gill architect">
 </div>
 
 <div id="index_content">
