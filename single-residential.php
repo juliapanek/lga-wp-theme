@@ -15,12 +15,9 @@ Template Name Posts: Project
 	<div class="main_container">
 
 <?php
-		$attachment = get_post( get_field('image') ); 
-		
-		$alt = get_post_meta($attachment->ID, '_wp_attachment_image_alt', true);
 		$image = get_field('image'); 
 
-		echo '<img src="' . $image['url'] . '" alt="' . $alt . '"/>';
+		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
 ?>
 		<!-- add conditional to display/not display .caption -->
 		<p class="caption"><?php the_field('caption'); ?></p>
