@@ -8,6 +8,8 @@ Template Name Posts: Home
 
 <?php get_sidebar(); ?>
 
+<?php get_footer(); ?>
+
 <div id="main_content">
 	<img class="logo_left" src="http://lesliegill.com/wordpress/wp-content/themes/lga/img/leslie-gill.png" alt="leslie gill architect">
 </div> 
@@ -19,7 +21,7 @@ Template Name Posts: Home
 <div id="index_content">
 	<div class="index_container">
 <?php 
-		$q = new WP_Query("p=787");
+		$q = new WP_Query("p=791");
 			if ($q->have_posts() ) {
 				$q->the_post();
 				$img = get_field('home_image');

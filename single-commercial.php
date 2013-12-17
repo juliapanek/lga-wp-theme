@@ -8,6 +8,8 @@ Template Name Posts: Project
 
 <?php get_sidebar(); ?>
 
+<?php get_footer(); ?>
+
 THIS IS A COMMERCIAL POST
 <div id="main_content">
 	<img class="logo_left" src="../img/leslie-gill.png" alt="leslie gill architect">

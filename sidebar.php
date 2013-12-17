@@ -9,11 +9,10 @@
 
 <?php 				$com = new WP_Query("post_type=commercial"); 
 					if ($com->have_posts() ) {
-						echo '<li class="indent">';
+						echo '<li class="indent">'; 
 						while ( $com->have_posts() ) {
 							$com->the_post();
-							
-						echo  get_the_title(); 
+						echo '<a href="'.get_permalink().'">'.get_the_title().'</a></li>';
 
 				
 						}
@@ -31,7 +30,7 @@
 						while ( $com->have_posts() ) {
 							$com->the_post();
 							
-						echo  get_the_title(); 
+						echo '<a href="'.get_permalink().'">'.get_the_title().'</a></li>';
 
 				
 						}
@@ -49,7 +48,7 @@
 						while ( $com->have_posts() ) {
 							$com->the_post();
 							
-						echo  get_the_title(); 
+						echo '<a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
 
 				
 						}
@@ -68,11 +67,10 @@
 
 <?php 				$com = new WP_Query("post_type=people"); 
 					if ($com->have_posts() ) {
-						echo '<li class="indent">';
 						while ( $com->have_posts() ) {
 							$com->the_post();
 							
-						echo  get_the_title(); 
+						echo '<li class="indent"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
 
 				
 						}
