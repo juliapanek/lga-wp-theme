@@ -14,12 +14,13 @@ Template Name Posts: Project
 	<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
 	<div class="main_container">
 
-<?php 	$attachment = get_post( get_field('image') ); 
+<?php
+		$attachment = get_post( get_field('image') ); 
 		
 		$alt = get_post_meta($attachment->ID, '_wp_attachment_image_alt', true);
 		$image = get_field('image'); 
 
-		//echo '<img src="'.$image[0];.'"alt="'.$alt'"/>';
+		echo '<img src="' . $image['url'] . '" alt="' . $alt . '"/>';
 ?>
 		<!-- add conditional to display/not display .caption -->
 		<p class="caption"><?php the_field('caption'); ?></p>
