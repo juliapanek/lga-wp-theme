@@ -8,8 +8,6 @@ Template Name Posts: Home
 
 <?php get_sidebar(); ?>
 
-<?php get_footer(); ?>
-
 <div id="main_content">
 	<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
 </div> 
@@ -31,3 +29,5 @@ Template Name Posts: Home
 ?>
 	</div>
 </div>
+
+<?php get_footer(); ?>

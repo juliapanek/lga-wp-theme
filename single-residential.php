@@ -8,8 +8,6 @@ Template Name Posts: Project
 
 <?php get_sidebar(); ?>
 
-<?php get_footer(); ?>
-
 <div id="main_content">
 	<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
 	<div class="main_container">
@@ -40,3 +38,6 @@ Template Name Posts: Project
 		<p class="normal"><?php the_field('intro_paragraph_2'); ?></p>
 	</div>
 </div>
+
+<?php get_footer(); ?>
+

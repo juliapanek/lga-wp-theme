@@ -18,4 +18,6 @@ WebFontConfig = { fontdeck: { id: '40738' } };
   s.parentNode.insertBefore(wf, s);
 })();
 </script>
+<?php wp_footer(); ?>
+</body>
 </html>

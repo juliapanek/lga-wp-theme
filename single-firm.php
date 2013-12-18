@@ -8,8 +8,6 @@ Template Name: Firm Profile
 
 <?php get_sidebar(); ?>
 
-<?php get_footer(); ?>
-
 THIS IS THE FIRM PROFILE TEMPLATE
 <div id="main_content">
 	<img class="logo_left" src="../img/leslie-gill.png" alt="leslie gill architect">
@@ -39,3 +37,6 @@ THIS IS THE FIRM PROFILE TEMPLATE
 		<p class="normal">Project text goes here</p>
 	</div>
 </div>
+
+<?php get_footer(); ?>
+

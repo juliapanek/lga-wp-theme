@@ -25,22 +25,19 @@ function my_cpt_post_types( $post_types ) {
 
     return $post_types;
 }
-add_filter( 'cpt_post_types', 'my_cpt_post_types' );
+add_filter('cpt_post_types', 'my_cpt_post_types');
 
 // incude jquery
 function include_jQuery() {
     if (!is_admin()) {
-        wp_enqueue_script('jquery');
+#        wp_enqueue_script('jquery');
     }
 }
 add_action('init', 'include_jQuery');
 
-
-
-
-
-
-
-
+function enqueue_royal_sliders() {
+    register_new_royalslider_files(1); 
+}
+add_action('init', 'enqueue_royal_sliders');
 
 ?>

@@ -8,8 +8,6 @@ Template Name Posts: Project
 
 <?php get_sidebar(); ?>
 
-<?php get_footer(); ?>
-
 THIS IS A INSTITUTIONAL POST
 <div id="main_content">
 	<img class="logo_left" src="../img/leslie-gill.png" alt="leslie gill architect">
@@ -41,3 +39,5 @@ THIS IS A INSTITUTIONAL POST
 		<p class="normal">Project text goes here</p>
 	</div>
 </div>
+
+<?php get_footer(); ?>
