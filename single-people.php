@@ -8,13 +8,17 @@ Template Name: People
 
 <?php get_sidebar(); ?>
 
-THIS IS A PEOPLE POST
 <div id="main_content">
 	<img class="logo_left" src="../img/leslie-gill.png" alt="leslie gill architect">
 	<div class="main_container">
-		<p class="title">name</p>
+		<h1 class="title"><?php the_field('name'); ?></h1>
+		<h1 class="title"><?php the_field('role'); ?></h1>
+		<!-- add conditional for license-->
+		<h1 class="title"><?php the_field('license'); ?></h1>
+
 		<img class="full" src="" alt="bio image">
-		<p class="normal">bio text goes here</p>
+
+		<p class="normal"><?php the_field('bio'); ?></p>
 	</div>
 </div>
 

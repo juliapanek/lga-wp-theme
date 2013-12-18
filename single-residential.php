@@ -8,6 +8,7 @@ Template Name Posts: Project
 
 <?php get_sidebar(); ?>
 
+
 <div id="main_content">
 	<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
 	<div class="main_container">
@@ -15,7 +16,7 @@ Template Name Posts: Project
 <?php
 		$image = get_field('image'); 
 
-		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
+		echo '<img class="full" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
 ?>
 		<!-- add conditional to display/not display .caption -->
 		<p class="caption"><?php the_field('caption'); ?></p>
@@ -36,6 +37,25 @@ Template Name Posts: Project
 		<p class="intro"><?php the_field('intro_paragraph_1'); ?></p>
 		<!-- add conditional to display/not display .normal -->
 		<p class="normal"><?php the_field('intro_paragraph_2'); ?></p>
+			<div class="credit_left">
+			
+<?php 		if(get_field('credits'))
+			{
+				echo '<ul>';
+
+				while(has_sub_field('role'))
+				{	
+					echo '<li class="credit">sub_field_1 = ' . get_sub_field('role') . ', sub_field_2 = ' . get_sub_field('role') . ', etc</li>';
+				}	
+
+				echo '</ul>'; 
+			}
+?>
+			</div>
+			<div class="credit_right">
+				<!-- repeater here -->
+				<p class="credit"><?php the_field('name'); ?></p>
+			</div>
 	</div>
 </div>
 
