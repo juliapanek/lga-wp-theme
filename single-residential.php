@@ -28,27 +28,21 @@
 		<p class="intro"><?php the_field('intro_paragraph_1'); ?></p>
 		<!-- add conditional to display/not display .normal -->
 		<p class="normal"><?php the_field('intro_paragraph_2'); ?></p>
-			<div class="credit_left">
-			
-<?php 		if(get_field('credits'))
-			{
+
+		<div class="credits">
+<?php
+			if (get_field('credits')) {
 				echo '<ul>';
-
-				while(has_sub_field('role'))
-				{	
-					echo '<li class="credit">sub_field_1 = ' . get_sub_field('role') . ', sub_field_2 = ' . get_sub_field('role') . ', etc</li>';
-				}	
-
-				echo '</ul>'; 
+				 
+				while (has_sub_field('credits')) {
+					echo '<li class="credit">role = ' . get_sub_field('role') . ', name = ' . get_sub_field('name') . '</li>';
+			   }
+			   
+				echo '</ul>';
 			}
 ?>
-			</div>
-			<div class="credit_right">
-				<!-- repeater here -->
-				<p class="credit"><?php the_field('name'); ?></p>
-			</div>
+		</div>
 	</div>
-
 </div>
 
 <?php get_footer(); ?>

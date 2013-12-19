@@ -25,15 +25,31 @@ Template Name: People
 <div id="side_content">
 	<img class="logo_right" src="../img/architect.png" alt="leslie gill architect">
 	<div class="side_container">
-		<p class="title">experience</p>
-			<div class="cv_container">
-				<li class="noindent">description</li>
-					<li class="indent">date, location</li>
-				<li class="noindent">description</li>
-					<li class="indent">date, location</li>
-				<li class="noindent">description</li>
-					<li class="indent">date, location</li>
-			</div>
+		<div class="resume">
+<?php
+		if (get_field('resume')) {
+				echo '<ul>';
+				 
+				while (has_sub_field('resume')) {
+					echo '<li class="section">title = ' . get_sub_field('section_title') . '<br>';
+
+					if (get_sub_field('section_jobs')) {
+						echo '<ul>';
+				 
+					   	while (has_sub_field('section_jobs')) {
+							echo '<li class="jobs">name = ' . get_sub_field('name') . ', description = ' . get_sub_field('description') . '</li>';
+						}
+						
+						echo '</ul>';
+					}
+					
+					echo '</li>';				   
+			   }
+			   
+				echo '</ul>';
+			}
+?>
+		</div>
 	</div>
 </div>
 
