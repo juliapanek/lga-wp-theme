@@ -1,25 +1,16 @@
-<?php
-/*
-Template Name Posts: Project
-*/
-?>
-
 <?php get_header(); ?>
 
 <?php get_sidebar(); ?>
 
-
 <div id="main_content">
 	<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
 	<div class="main_container">
-
 <?php
-		$image = get_field('image'); 
-
-		echo '<img class="full" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
+        $galleryId = get_field('gallery_id');
+        if ($galleryId && ($galleryId != 0)) {
+           echo do_shortcode( '[ngg_images gallery_ids="' . $galleryId . '" display_type="ds-nextgen_royalslider"]' );
+        }
 ?>
-		<!-- add conditional to display/not display .caption -->
-		<p class="caption"><?php the_field('caption'); ?></p>
 	</div>
 </div>
 
@@ -57,6 +48,7 @@ Template Name Posts: Project
 				<p class="credit"><?php the_field('name'); ?></p>
 			</div>
 	</div>
+
 </div>
 
 <?php get_footer(); ?>
