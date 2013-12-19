@@ -1,5 +1,9 @@
-<footer class="contact">
-<p>277 Broadway&ensp;Suite 100&ensp;New York&ensp;NY 10007&emsp;TEL&ensp;212 334-8011&ensp;FAX&ensp;212 334-8046&ensp;EMAIL&ensp;info@lesliegill.com</p>
+<footer>
+	<div id="footer_container">
+		<p class="contact">277 Broadway&emsp;Suite 100&emsp;New York&ensp;NY 10007</p>
+		<p class="contact">TEL&ensp;212 334-8011&emsp;FAX&ensp;212 334-8046</p>
+		<p class="contact">EMAIL&ensp;info@lesliegill.com</p>
+	</div>
 </footer>
 
 <script type="text/javascript">

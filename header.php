@@ -10,3 +10,7 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+
+<div id="header">
+	<img class="logo_right" src="<?php bloginfo('template_directory'); ?>/img/lga-logo.png" alt="leslie gill architect">
+	</div>
