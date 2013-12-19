@@ -30,7 +30,7 @@ add_filter('cpt_post_types', 'my_cpt_post_types');
 // incude jquery
 function include_jQuery() {
     if (!is_admin()) {
-#        wp_enqueue_script('jquery');
+        wp_enqueue_script('jquery');
     }
 }
 add_action('init', 'include_jQuery');

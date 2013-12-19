@@ -2,9 +2,6 @@
 <p>277 Broadway&ensp;Suite 100&ensp;New York&ensp;NY 10007&emsp;TEL&ensp;212 334-8011&ensp;FAX&ensp;212 334-8046&ensp;EMAIL&ensp;info@lesliegill.com</p>
 </footer>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.js"></script>
-
 <script type="text/javascript">
 WebFontConfig = { fontdeck: { id: '40738' } };
 
