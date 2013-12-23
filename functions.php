@@ -31,6 +31,7 @@ add_filter('cpt_post_types', 'my_cpt_post_types');
 function include_jQuery() {
     if (!is_admin()) {
         wp_enqueue_script('jquery');
+        wp_enqueue_script('bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js', null, null, true);
     }
 }
 add_action('init', 'include_jQuery');

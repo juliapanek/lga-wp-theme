@@ -1,16 +1,28 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
-<html lang='en'> 
+<!DOCTYPE html> 
+<html lang="en"> 
 
 <head>
 	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 	<meta name="Leslie Gill Architect" content="Leslie Gill Architect is a New York City-based design and architecture firm">  
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/reset.css" type="text/css"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">  
 	<?php wp_head(); ?>
 </head>
 <body>
 
 <div id="header">
-	<img class="logo_right" src="<?php bloginfo('template_directory'); ?>/img/lga-logo.png" alt="leslie gill architect">
+	<div class="row">
+		<div class="col-xs-7">
+			<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
+		</div>
+		<div class="col-xs-5">
+			<img class="logo_right" src="<?php bloginfo('template_directory'); ?>/img/architect.png" alt="leslie gill architect">
+		</div>
 	</div>
+</div>
+
+<div class="row">
+<div class="col-xs-12 col-lg-10 col-lg-push-2">
+<div class="row">
