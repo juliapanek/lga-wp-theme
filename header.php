@@ -10,9 +10,16 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">  
 	<?php wp_head(); ?>
 </head>
+
 <body>
 
 <div id="header">
+	<h1>Leslie Gill Architect</h1>
+</div>
+
+<div class="container">
+
+<div id="header_content">
 	<div class="row">
 		<div class="col-xs-7">
 			<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
