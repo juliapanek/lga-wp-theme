@@ -8,11 +8,10 @@
 			          <ul class="commercial_projects">
 
 <?php 				$com = new WP_Query("post_type=commercial"); 
-					if ($com->have_posts() ) {
-						echo '<li class="indent">'; 
+					if ($com->have_posts() ) { 
 						while ( $com->have_posts() ) {
 							$com->the_post();
-						echo '<a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+						echo '<li class="indent"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
 
 				
 						}
@@ -24,13 +23,12 @@
 			        <li id="institutional">institutional
 			          <ul class="institutional_projects">
 
-<?php 				$com = new WP_Query("post_type=institutional"); 
-					if ($com->have_posts() ) {
-						echo '<li class="indent">';
-						while ( $com->have_posts() ) {
-							$com->the_post();
+<?php 				$inst = new WP_Query("post_type=institutional"); 
+					if ($inst->have_posts() ) {
+						while ( $inst->have_posts() ) {
+							$inst->the_post();
 							
-						echo '<a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+						echo '<li class="indent"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
 
 				
 						}
@@ -42,13 +40,12 @@
 			        <li id="residential">residential
 			        <ul class="residential_projects">
 
-<?php 				$com = new WP_Query("post_type=residential"); 
-					if ($com->have_posts() ) {
-						echo '<li class="indent">';
-						while ( $com->have_posts() ) {
-							$com->the_post();
+<?php 				$res = new WP_Query("post_type=residential"); 
+					if ($res->have_posts() ) {
+						while ( $res->have_posts() ) {
+							$res->the_post();
 							
-						echo '<a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
+						echo '<li class="indent"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
 
 				
 						}
