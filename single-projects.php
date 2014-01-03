@@ -3,7 +3,6 @@
 <?php get_sidebar(); ?>
 
 <div id="main_content">
-	<img class="logo_left" src="../img/leslie-gill.png" alt="leslie gill architect">
 	<div class="main_container">
 		<div class="images">
 <?php
@@ -23,7 +22,6 @@
 </div>
 
 <div id="side_content">
-	<img class="logo_right" src="../img/architect.png" alt="leslie gill architect">
 	<div class="side_container">
 		<div class="projects">
 <?php
@@ -31,7 +29,7 @@
 				echo '<ul>';
 				 
 				while (has_sub_field('commercial_institutional')) {
-					echo '<li class="project">name = ' . get_sub_field('name') . ', location = ' . get_sub_field('location') . '</li>';
+					echo '<li class="noindent">' . get_sub_field('name') . '</li><li class="indent">' . get_sub_field('location') . '</li>';
 			   }
 			   
 				echo '</ul>';
@@ -44,7 +42,7 @@
 				echo '<ul>';
 				 
 				while (has_sub_field('residential')) {
-					echo '<li class="project">name = ' . get_sub_field('name') . ', location = ' . get_sub_field('location') . '</li>';
+					echo '<li class="noindent">' . get_sub_field('name') . '</li><li class="indent">' . get_sub_field('location') . '</li>';
 			   }
 			   
 				echo '</ul>';
@@ -53,3 +51,5 @@
 		</div>
 	</div>
 </div>
+
+<?php get_footer(); ?>

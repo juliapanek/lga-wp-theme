@@ -3,7 +3,7 @@
 	  <ul class="noindent">
 		    <li id="project_menu" class="indent">Projects
 			      <ul class="project_option">
-			        <li>full list</li>
+			        <li><a href="http://69.195.124.62/~lesliegi/projects/list/">full list</a></li>
 			        <li id="commercial">commercial
 			          <ul class="commercial_projects">
 
