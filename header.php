@@ -6,8 +6,6 @@
 	<meta name="Leslie Gill Architect" content="Leslie Gill Architect is a New York City-based design and architecture firm">  
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">  
 	<?php wp_head(); ?>
 </head>
 

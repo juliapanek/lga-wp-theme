@@ -235,6 +235,11 @@ a:active {
 	padding: 10px;
 }
 
+.rsUni .rsBullet {
+	padding: 0px;
+	margin: 4px 4px 0 4px;
+}
+
 /*
 .full {
 	width: 100%;
