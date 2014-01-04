@@ -16,7 +16,8 @@
 				echo '<ul>';
 				 
 				while (has_sub_field('credits')) {
-					echo '<li class="credit">role = ' . get_sub_field('role') . ', name = ' . get_sub_field('name') . '</li>';
+					echo '<li class="credit">' . get_sub_field('role') . '&emsp;' . get_sub_field('credit') . '</li>';
+					// echo '<li class="credit">role = ' . get_sub_field('role') . ', name = ' . get_sub_field('credit') . '</li>';
 			   }
 			   
 				echo '</ul>';

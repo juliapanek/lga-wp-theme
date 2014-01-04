@@ -9,21 +9,25 @@ Template Name: People
 <?php get_sidebar(); ?>
 
 <div id="main_content">
-	<img class="logo_left" src="../img/leslie-gill.png" alt="leslie gill architect">
 	<div class="main_container">
-		<h1 class="title"><?php the_field('name'); ?></h1>
-		<h1 class="title"><?php the_field('role'); ?></h1>
+		<p class="title"><?php the_field('name'); ?></p>
+		<h1 class="location"><?php the_field('role'); ?></h1>
 		<!-- add conditional for license-->
-		<h1 class="title"><?php the_field('license'); ?></h1>
+		<h1 class="location"><?php the_field('license'); ?></h1>
 
-		<img class="full" src="" alt="bio image">
+<?php
+			if (get_field('image')) {
+				
+					$image = get_field('image');
+					echo '<img class="bio_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
+			}
+?>
 
 		<p class="normal"><?php the_field('bio'); ?></p>
 	</div>
 </div>
 
 <div id="side_content">
-	<img class="logo_right" src="../img/architect.png" alt="leslie gill architect">
 	<div class="side_container">
 		<div class="resume">
 <?php
@@ -31,13 +35,13 @@ Template Name: People
 				echo '<ul>';
 				 
 				while (has_sub_field('resume')) {
-					echo '<li class="section">title = ' . get_sub_field('section_title') . '<br>';
+					echo '<li><p class="location">' . get_sub_field('section_title') . '</p><br>';
 
 					if (get_sub_field('section_jobs')) {
 						echo '<ul>';
 				 
 					   	while (has_sub_field('section_jobs')) {
-							echo '<li class="jobs">name = ' . get_sub_field('name') . ', description = ' . get_sub_field('description') . '</li>';
+							echo '<li class="noindent">' . get_sub_field('name') . get_sub_field('description') . '</li>';
 						}
 						
 						echo '</ul>';

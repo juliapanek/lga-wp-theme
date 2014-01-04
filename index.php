@@ -2,7 +2,7 @@
 
 <div class="content">
 <?php 
-		$q = new WP_Query("p=54");
+		$q = new WP_Query("p=102");
 			if ($q->have_posts() ) {
 				$q->the_post();
 				$img = get_field('home_image');
