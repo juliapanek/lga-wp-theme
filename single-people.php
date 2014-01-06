@@ -1,34 +1,11 @@
-<?php
-/*
-Template Name: People
-*/
-?>
-
 <?php get_header(); ?>
 
-<?php get_sidebar(); ?>
-
-<div id="main_content">
-	<div class="main_container">
+<div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-6 col-lg-push-6">
 		<p class="title"><?php the_field('name'); ?></p>
 		<h1 class="location"><?php the_field('role'); ?></h1>
-		<!-- add conditional for license-->
 		<h1 class="location"><?php the_field('license'); ?></h1>
-
-<?php
-			if (get_field('image')) {
-				
-					$image = get_field('image');
-					echo '<img class="bio_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
-			}
-?>
-
 		<p class="normal"><?php the_field('bio'); ?></p>
-	</div>
-</div>
 
-<div id="side_content">
-	<div class="side_container">
 		<div class="resume">
 <?php
 		if (get_field('resume')) {
@@ -54,7 +31,16 @@ Template Name: People
 			}
 ?>
 		</div>
-	</div>
+</div>
+
+<div class="content col-xs-12 col-sm-7 col-sm-pull-5 col-lg-6 col-lg-pull-6">
+<?php
+			if (get_field('image')) {
+				
+					$image = get_field('image');
+					echo '<img class="bio_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
+			}
+?>
 </div>
 
 <?php get_footer(); ?>
