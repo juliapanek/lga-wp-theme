@@ -1,9 +1,4 @@
-$( document ).ready(function() {
-    console.log( "julia i am so ready" );
-
-
-	// NAVIGATION 
-
+jQuery(document).ready(function($) {
 	$('#commercial').click(function() {
 		$('.com').addClass('show');
 		$('.inst').removeClass('show');
@@ -25,7 +20,4 @@ $( document ).ready(function() {
 	$('#people').click(function() {
 		$('.ppl').toggleClass('hide');
 	});
-
-
-
-}); // end of doc ready 
+});

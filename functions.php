@@ -38,7 +38,8 @@ add_action('pre_get_posts','magic_homepage_post');
 function enqueue_scripts() {
     if (!is_admin()) {
         wp_enqueue_script('jquery');
-        wp_enqueue_script('bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js', null, null, true);
+        wp_enqueue_script('bootstrap', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js', null, null, true);
+        wp_enqueue_script('lga-menu', get_bloginfo('template_url') . '/js/menu.js', null, null, true);
     }
 }
 add_action('init', 'enqueue_scripts');
@@ -52,7 +53,7 @@ add_action('init', 'enqueue_royal_slider_files');
 
 function enqueue_css() {
     if (!is_admin()) {
-        wp_enqueue_style('bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css', null, null, null);
+        wp_enqueue_style('bootstrap', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css', null, null, null);
         wp_enqueue_style('local', get_bloginfo('stylesheet_url'), null, null, null);
     }
 }

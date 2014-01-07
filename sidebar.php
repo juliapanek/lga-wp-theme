@@ -1,5 +1,5 @@
 <nav>
-	<div id="nav" class="col-xs-12 col-lg-2 col-lg-pull-10">
+	<div id="menu" class="col-xs-12 col-lg-2 col-lg-pull-10">
 	  <ul class="noindent">
 		    <h2 id="project_menu">Projects</h2>
 			      <ul class="project_option">
