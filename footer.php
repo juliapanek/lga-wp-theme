@@ -25,6 +25,9 @@ WebFontConfig = { fontdeck: { id: '40738' } };
   s.parentNode.insertBefore(wf, s);
 })();
 </script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/menucollapse.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -11,7 +11,7 @@
 					if ($com->have_posts() ) { 
 						while ( $com->have_posts() ) {
 							$com->the_post();
-						echo '<li class="indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+						echo '<li class="com indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
 
 				
 						}
@@ -28,7 +28,7 @@
 						while ( $inst->have_posts() ) {
 							$inst->the_post();
 							
-						echo '<li class="indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+						echo '<li class="inst indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
 
 				
 						}
@@ -45,7 +45,7 @@
 						while ( $res->have_posts() ) {
 							$res->the_post();
 							
-						echo '<li class="indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
+						echo '<li class="res indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
 
 				
 						}
@@ -59,15 +59,15 @@
 		    <h2 id="studio_menu">Studio</h2>
 			      <ul class="studio_option indent">
 			        <li>firm profile</li>
-			        <li>people
-			          <ul class="people">
+			        <li id="people">people
+			          <ul>
 
 <?php 				$com = new WP_Query("post_type=people"); 
 					if ($com->have_posts() ) {
 						while ( $com->have_posts() ) {
 							$com->the_post();
 							
-						echo '<li class="indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
+						echo '<li class="ppl indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
 
 				
 						}
