@@ -1,0 +1,459 @@
+/******************************
+*
+*  RoyalSlider LGA Skin
+*
+*    1. Arrows 
+*    2. Bullets
+*    3. Thumbnails
+*    4. Tabs
+*    5. Fullscreen button
+*    6. Play/close video button
+*    7. Preloader
+*    8. Caption
+*    
+******************************/
+
+
+/* Background */
+.rsLGA,
+.rsLGA .rsOverflow,
+.rsLGA .rsSlide,
+.rsLGA .rsVideoFrameHolder,
+.rsLGA .rsThumbs {
+	background: #222;
+	color: #FFF;
+}
+
+
+/***************
+*
+*  1. Arrows
+*
+****************/
+
+.rsLGA .rsArrow {
+	height: 100%;
+	width: 60px;
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	z-index: 21;
+}
+.rsLGA.rsVer .rsArrow {
+	width: 100%;
+	height: 60px;
+	
+}
+.rsLGA.rsVer .rsArrowLeft { top: 0; left: 0; }
+.rsLGA.rsVer .rsArrowRight { bottom: 0;  left: 0; }
+
+.rsLGA.rsHor .rsArrowLeft { left: 0; top: 0; }
+.rsLGA.rsHor .rsArrowRight { right: 0; top:0; }
+
+.rsLGA .rsArrowIcn {		
+	width: 32px;
+	height: 32px;
+	top: 50%;
+	left: 50%;
+	margin-top:-16px;	
+	margin-left: -16px;
+
+	position: absolute;	
+	cursor: pointer;	
+	background: url('rs-lga.png');
+	opacity: 0.5;
+	border-radius: 2px;
+}
+.rsLGA .rsArrow:hover .rsArrowIcn {
+	opacity: 1;
+}
+
+.rsLGA.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
+.rsLGA.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
+
+.rsLGA.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
+.rsLGA.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
+
+.rsLGA .rsArrowDisabled .rsArrowIcn { opacity: .1 !important; filter: alpha(opacity=20);  *display: none; }
+
+
+/***************
+*
+*  2. Bullets
+*
+****************/
+
+.rsLGA .rsBullets {
+	position: relative;
+	z-index: 35;
+	padding-top: 4px;
+	width: 100%;
+	height: auto;
+	margin: 0 auto; 
+
+	text-align: center;
+	line-height: 5px;
+	overflow: hidden;
+}
+.rsLGA .rsBullet {
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	*display:inline; 
+	*zoom:1;
+	padding: 5px;
+}
+.rsLGA .rsBullet span {
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #BBB;
+}
+.rsLGA .rsBullet.rsNavSelected span {
+	background-color: #383838;
+}
+
+
+
+
+
+/***************
+*
+*  3. Thumbnails
+*
+****************/
+
+.rsLGA .rsThumbsHor {
+	width: 100%;
+	height: 72px;
+}
+.rsLGA .rsThumbsVer {
+	width: 96px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.rsLGA.rsWithThumbsHor .rsThumbsContainer {
+	position: relative;
+	height: 100%;
+}
+.rsLGA.rsWithThumbsVer .rsThumbsContainer {
+	position: relative;
+	width: 100%;
+}
+.rsLGA .rsThumb {
+	float: left;
+	overflow: hidden;
+	width: 96px;
+	height: 72px;
+}
+.rsLGA .rsThumb img {
+	width: 100%;
+	height: 100%;
+}
+.rsLGA .rsThumb.rsNavSelected {
+	background: #333;
+}
+.rsLGA .rsThumb.rsNavSelected img {
+	opacity: 0.7;
+	filter: alpha(opacity=30);
+}
+.rsLGA .rsThumb.rsNavSelected .thumbIco {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 2px solid #FFF;
+	border: 2px solid rgba(255,255,255,0.9);
+	-webkit-backface-visibility: hidden;
+} 
+
+.rsLGA .rsTmb {
+	display: block;
+}
+
+/* Thumbnails with text */
+.rsLGA .rsTmb h5 {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	line-height: 20px;
+	color: #FFF;
+}
+.rsLGA .rsTmb span {
+	color: #DDD;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+
+
+/* Thumbnails arrow icons */
+.rsLGA .rsThumbsArrow {
+	height: 100%;
+	width: 20px;
+	position: absolute;
+	display: block;
+	cursor: pointer;	
+	z-index: 21;	
+}
+.rsLGA .rsThumbsArrow:hover {
+
+}
+.rsLGA.rsWithThumbsVer .rsThumbsArrow {
+	width: 100%;
+	height: 20px;
+}
+.rsLGA.rsWithThumbsVer .rsThumbsArrowLeft { top: 0; left: 0; }
+.rsLGA.rsWithThumbsVer .rsThumbsArrowRight { bottom: 0;  left: 0; }
+
+.rsLGA.rsWithThumbsHor .rsThumbsArrowLeft { left: 0; top: 0; }
+.rsLGA.rsWithThumbsHor .rsThumbsArrowRight { right: 0; top:0; }
+
+.rsLGA .rsThumbsArrowIcn {		
+	width: 16px;
+	height: 16px;
+	top: 50%;
+	left: 50%;
+	margin-top:-8px;	
+	margin-left: -8px;
+	position: absolute;	
+	cursor: pointer;	
+	background: url('rs-lga.png') transparent;
+}
+
+.rsLGA.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
+.rsLGA.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -128px -48px; }
+
+.rsLGA.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -144px -32px; }
+.rsLGA.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -144px -48px; }
+
+.rsLGA .rsThumbsArrowDisabled { display: none !important; }
+
+/* Thumbnails resizing on smaller screens */
+@media screen and (min-width: 0px) and (max-width: 800px) {
+	.rsLGA .rsThumb {
+		width: 59px;
+		height: 44px;
+	}
+	.rsLGA .rsThumbsHor {
+		height: 44px;
+	}
+	.rsLGA .rsThumbsVer {
+		width: 59px;
+	}
+}
+
+
+
+
+/***************
+*
+*  4. Tabs
+*
+****************/
+
+.rsLGA .rsTabs {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	text-align:center;
+	overflow: hidden; padding-top: 12px; position: relative;
+}
+.rsLGA .rsTab {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	height: auto;
+	width: auto;
+	color: #333;
+	padding: 5px 13px 6px;
+	min-width: 72px;
+	border: 1px solid #D9D9DD;
+	text-decoration: none;
+
+	background: #FFF;
+	border-right: none;
+	*display:inline; 
+	*zoom:1;
+	*border-right: 1px solid #d9d9d9;
+	
+}
+.rsLGA .rsTab:first-child {
+	border-top-left-radius: 16px;
+	border-bottom-left-radius: 16px;
+}
+.rsLGA .rsTab:last-child { 
+	border-top-right-radius: 16px;
+	border-bottom-right-radius: 16px;
+	border-right: 1px solid #D9D9DD;
+}
+.rsLGA .rsTab:active { 
+	background-color: #f4f4f4;
+}
+.rsLGA .rsTab.rsNavSelected { 
+	color: #FFF;
+	background: #383838;
+	border-color: #383838;
+}
+
+
+
+
+
+/***************
+*
+*  5. Fullscreen button
+*
+****************/
+
+.rsLGA .rsFullscreenBtn {
+	right: 0;
+	top: 0;
+	width: 44px;
+	height: 44px;
+	z-index: 22;
+	display: block;
+	position: absolute;
+	cursor: pointer;
+	
+}
+.rsLGA .rsFullscreenIcn {
+	display: block;
+	margin: 6px;
+	width: 32px;
+	height: 32px;
+
+	background: url('rs-lga.png') 0 0 transparent;
+	opacity: 0.7;
+	border-radius: 2px;
+
+}
+.rsLGA .rsFullscreenBtn:hover .rsFullscreenIcn {
+	opacity: 1;
+}
+.rsLGA.rsFullscreen .rsFullscreenIcn {
+	background-position: -32px 0;
+}
+
+
+
+
+
+/***************
+*
+*  6. Play/close video button
+*
+****************/
+
+.rsLGA .rsPlayBtn {
+	-webkit-tap-highlight-color:rgba(0,0,0,0.3);
+	width:64px;
+	height:64px;
+	margin-left:-32px;
+	margin-top:-32px;
+	cursor: pointer;
+}
+.rsLGA .rsPlayBtnIcon {
+	width:64px;
+	display:block;
+	height:64px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	transition: .3s;
+
+	background:url(rs-lga.png) no-repeat 0 -32px;
+	background-color: #383838;
+	background-color: rgba(0,0,0,0.75);
+	*background-color: #383838;
+}
+.rsLGA .rsPlayBtn:hover .rsPlayBtnIcon {
+	background-color: rgba(0,0,0,0.9);
+}
+.rsLGA .rsBtnCenterer {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width: 20px;
+	height: 20px;
+}
+.rsLGA .rsCloseVideoBtn {
+	right: 0;
+	top: 0;
+	width: 44px;
+	height: 44px;
+	z-index: 500;
+	position: absolute;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+	
+}
+.rsLGA .rsCloseVideoBtn.rsiOSBtn {
+	top: -38px;
+	right: -6px;
+}
+
+.rsLGA .rsCloseVideoIcn {
+	margin: 6px;
+	width: 32px;
+	height: 32px;
+	background: url('rs-lga.png') -64px 0;
+	background-color: #383838;
+	background-color: rgba(0,0,0,0.75);
+	*background-color: #383838;
+}
+.rsLGA .rsCloseVideoIcn:hover {
+	background-color: rgba(0,0,0,0.9);
+}
+
+
+
+/***************
+*
+*  7. Preloader
+*
+****************/
+
+.rsLGA .rsPreloader {
+	width:20px;
+	height:20px;
+	background-image:url(../preloaders/preloader-white.gif);
+
+	left:50%;
+	top:50%;
+	margin-left:-10px;
+	margin-top:-10px;	
+}
+
+
+
+
+/***************
+*
+*  8. Global caption
+*
+****************/
+.rsLGA .rsGCaption {
+	position: absolute;
+	float: none;
+	bottom: 6px;
+	left: 6px;
+	text-align: left;
+
+	background: #222;
+
+	color: #FFF;
+	padding: 2px 8px;
+	width: auto;
+	font-size: 12px;
+	border-radius: 2px;
+}

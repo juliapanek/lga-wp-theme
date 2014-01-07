@@ -58,4 +58,13 @@ function enqueue_css() {
     }
 }
 add_action('init', 'enqueue_css');
+
+function new_royalslider_add_lga_skins($skins) {
+      $skins['rsLGA'] = array(
+           'label' => 'LGA skin',
+           'path' => get_stylesheet_directory_uri() . '/rs-skins/rs-lga.css'
+      );
+      return $skins;
+}
+add_filter('new_royalslider_skins', 'new_royalslider_add_lga_skins');
 ?>
