@@ -3,7 +3,7 @@
 	  <ul class="noindent">
 		    <h2 id="project_menu">Projects</h2>
 			      <ul class="project_option">
-			        <li><a href="http://69.195.124.62/~lesliegi/projects/list/">full list</a></li>
+			       <a href="http://69.195.124.62/~lesliegi/projects/list/"> <li class="noindent">full list</li></a>
 			        <li id="commercial" class="noindent">commercial
 			          <ul class="commercial_projects">
 
@@ -57,9 +57,9 @@
 			      </ul><!-- end of project option -->
 <!--end of projects-->
 		    <h2 id="studio_menu">Studio</h2>
-			      <ul class="studio_option indent">
-			        <li>firm profile</li>
-			        <li id="people">people
+			      <ul class="studio_option">
+			        <li class="noindent">firm profile</li>
+			        <li class="noindent" id="people">people
 			          <ul>
 
 <?php 				$com = new WP_Query("post_type=people"); 
@@ -76,7 +76,7 @@
 ?> 
 			          </ul>
 			        </li>
-			        <li>contact</li>
+			        <li class="noindent">contact</li>
 			      </ul>
 		    <!-- end of studio -->
 	  </ul>

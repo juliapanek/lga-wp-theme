@@ -1,11 +1,7 @@
 <?php get_header(); ?>
 
 <div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-6 col-lg-push-6">
-		<p class="title"><?php the_field('name'); ?></p>
-		<h1 class="location"><?php the_field('role'); ?></h1>
-		<h1 class="location"><?php the_field('license'); ?></h1>
-		<p class="normal"><?php the_field('bio'); ?></p>
-
+	
 		<div class="resume">
 <?php
 		if (get_field('resume')) {
@@ -34,13 +30,20 @@
 </div>
 
 <div class="content col-xs-12 col-sm-7 col-sm-pull-5 col-lg-6 col-lg-pull-6">
+
+		<p class="title"><?php the_field('name'); ?></p>
+		<h1 class="location"><?php the_field('role'); ?></h1>
+		<h1 class="location"><?php the_field('license'); ?></h1>
+
 <?php
-			if (get_field('image')) {
-				
-					$image = get_field('image');
-					echo '<img class="bio_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
-			}
+		if (get_field('image')) {
+			
+				$image = get_field('image');
+				echo '<img class="bio_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
+		}
 ?>
+		<p class="normal"><?php the_field('bio'); ?></p>
+
 </div>
 
 <?php get_footer(); ?>
