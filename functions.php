@@ -26,6 +26,15 @@ function my_cpt_post_types( $post_types ) {
 }
 add_filter('cpt_post_types', 'my_cpt_post_types');
 
+function magic_homepage_post($query) {
+  if ( $query->is_home() && $query->is_main_query() ) {
+      $query->set('p', 102);
+      $query->set('post_type', 'any');
+  }
+}
+
+add_action('pre_get_posts','magic_homepage_post');
+
 function enqueue_scripts() {
     if (!is_admin()) {
         wp_enqueue_script('jquery');
