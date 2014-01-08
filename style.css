@@ -142,20 +142,27 @@ h2 {
 
 }
 
-li.noindent {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
-	-webkit-font-smoothing: antialiased;
+/* menu */ 
+
+li.menu_main {
+	font-family: "News Gothic", 'Arial Narrow', sans-serif;
 	font-size: 17px;
 	line-height: 1.3;
 	color: black;
 	list-style-type: none;
+
 }
 
-li.plist {
-	font-family: ScalaWeb, serif;
+li.menu_sub {
+	font-family: "News Gothic", 'Arial Narrow', sans-serif;
+	font-size: 17px;
+	line-height: 1.3;
+	color: black;
+	list-style-type: none;
+	padding: 0 0 0 10px;
 }
 
-li.noindent:hover {
+li.menu_main:hover, li.menu_sub:hover {
 	color: rgb(242, 134, 39);
 	cursor: pointer;
 	text-decoration: none;
@@ -166,9 +173,15 @@ li.noindent:hover {
 	transition: color 200ms linear;
 }
 
-li.plist:hover {
+/* project list & resume */ 
+
+li.noindent {
+	font-family: ScalaWeb, serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 17px;
+	line-height: 1.3;
 	color: black;
-	cursor: auto;
+	list-style-type: none;
 }
 
 li.indent {
@@ -177,18 +190,13 @@ li.indent {
 	font-size: 16px;
 	line-height: 1.3;
 	color: black; 
-	padding: 0 0 0 10px;
+	padding: 0 0 10px 10px;
 	list-style-type: none;
-}
-
-li.last {
-	margin: 0 0 10px 0;
 }
 
 li {
 	list-style-type:  none;
 }
-
 
 a {
 	line-height: 1.3;
@@ -258,8 +266,8 @@ h2#project_menu {
 	padding: 0;
 }
 
-h2 #studio_menu {
-	margin: 10px 0 0 0;
+h2#studio_menu {
+	margin: 10px 0;
 	padding: 0;
 }
 
@@ -338,26 +346,35 @@ footer {
 		font-size: 16px;
 	}
 
-	li.noindent {
-		border-bottom: 1px solid rgb(242, 134, 39);
-		font-size: 25px;
-		padding: 20px 0;
-	}
-
-	li.indent {
+	li.menu_main {
 		border-top: 1px solid lightgray;
 		font-size: 25px;
-		padding: 10px 0 10px 40px;
-		margin: 20px 0 0;
+		padding: 20px 0 20px 0;
+	}
+
+	li.menu_sub {
+		font-size: 25px;
+		padding: 10px 0 0 10px;
+	}
+
+	a {
+		font-size: 25px;
+	}
+
+	h2#studio_menu {
+		border-top: 1px solid rgb(242, 134, 39);
+		padding: 0;
+		margin: 0;
+	}
+
+	h2#project_menu, h2#studio_menu {
+		padding: 20px 0;
+		margin: 0;
 	}
 
 }
 
 @media(min-width:992px) {
-
-	#menu {
-	border-top: none;
-	}
 
 }
 

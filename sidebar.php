@@ -3,15 +3,15 @@
 	  <ul class="noindent">
 		    <h2 id="project_menu">Projects</h2>
 			      <ul class="project_option">
-			       <a href="http://69.195.124.62/~lesliegi/projects/list/"> <li class="noindent">full list</li></a>
-			        <li id="commercial" class="noindent">commercial
+			       <a href="http://69.195.124.62/~lesliegi/projects/list/"> <li class="menu_main">full list</li></a>
+			        <li id="commercial" class="menu_main">commercial
 			          <ul class="commercial_projects">
 
 <?php 				$com = new WP_Query("post_type=commercial"); 
 					if ($com->have_posts() ) { 
 						while ( $com->have_posts() ) {
 							$com->the_post();
-						echo '<li class="com indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+						echo '<li class="com menu_sub hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
 
 				
 						}
@@ -20,7 +20,7 @@
 ?>
 			          </ul>
 			        </li>
-			        <li id="institutional" class="noindent">institutional
+			        <li id="institutional" class="menu_main">institutional
 			          <ul class="institutional_projects">
 
 <?php 				$inst = new WP_Query("post_type=institutional"); 
@@ -28,7 +28,7 @@
 						while ( $inst->have_posts() ) {
 							$inst->the_post();
 							
-						echo '<li class="inst indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+						echo '<li class="inst menu_sub hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
 
 				
 						}
@@ -37,7 +37,7 @@
 ?>
 			          </ul>
 			        </li>
-			        <li id="residential" class="noindent">residential
+			        <li id="residential" class="menu_main">residential
 			        <ul class="residential_projects">
 
 <?php 				$res = new WP_Query("post_type=residential"); 
@@ -45,7 +45,7 @@
 						while ( $res->have_posts() ) {
 							$res->the_post();
 							
-						echo '<li class="res indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
+						echo '<li class="res menu_sub hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
 
 				
 						}
@@ -58,8 +58,8 @@
 <!--end of projects-->
 		    <h2 id="studio_menu">Studio</h2>
 			      <ul class="studio_option">
-			        <li class="noindent">firm profile</li>
-			        <li class="noindent" id="people">people
+			        <li class="menu_main">firm profile</li>
+			        <li class="menu_main" id="people">people
 			          <ul>
 
 <?php 				$com = new WP_Query("post_type=people"); 
@@ -67,7 +67,7 @@
 						while ( $com->have_posts() ) {
 							$com->the_post();
 							
-						echo '<li class="ppl indent hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
+						echo '<li class="ppl menu_sub hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
 
 				
 						}
@@ -76,7 +76,7 @@
 ?> 
 			          </ul>
 			        </li>
-			        <li class="noindent">contact</li>
+			        <li class="menu_main">contact</li>
 			      </ul>
 		    <!-- end of studio -->
 	  </ul>
