@@ -1,31 +1,5 @@
 <?php
 
-// Alt text for ACF get_sub_field images
-function get_image_with_alt($imagefield, $postID, $imagesize = 'full'){
-$imageID = get_sub_field($imagefield, $postID); 
-$image = wp_get_attachment_image_src( $imageID, $imagesize ); 
-$alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true); 
-return '<img src="' . $image[0] . '" alt="' . $alt_text . '" />';
-}
-
-/**
- * Hooks the WP cpt_post_types filter 
- *
- * @param array $post_types An array of post type names that the templates be used by
- * @return array The array of post type names that the templates be used by
- **/
-function my_cpt_post_types( $post_types ) {
-    $post_types[] = 'res_proj';
-    $post_types[] = 'inst_proj';
-    $post_types[] = 'com_proj';
-    $post_types[] = 'home_page';
-    $post_types[] = 'bio';
-    $post_types[] = 'firm_prof';
-
-    return $post_types;
-}
-add_filter('cpt_post_types', 'my_cpt_post_types');
-
 function magic_homepage_post($query) {
   if ( $query->is_home() && $query->is_main_query() ) {
       $query->set('p', 102);
@@ -44,12 +18,12 @@ function enqueue_scripts() {
 }
 add_action('init', 'enqueue_scripts');
 
-function enqueue_royal_slider_files() {
+function enqueue_new_royalslider_files() {
     if (!is_admin()) {
         register_new_royalslider_files(1);
     }
 }
-add_action('init', 'enqueue_royal_slider_files');
+add_action('init', 'enqueue_new_royalslider_files');
 
 function enqueue_css() {
     if (!is_admin()) {
@@ -67,4 +41,34 @@ function new_royalslider_add_lga_skins($skins) {
       return $skins;
 }
 add_filter('new_royalslider_skins', 'new_royalslider_add_lga_skins');
+
+class RoyalSliderLGARendererHelper {
+    private $pid;
+
+    function __construct($data, $options) {
+        $this->pid = $data->pid;
+    }
+    
+    function image_id() {
+        return array($this, 'get_image_id');
+    }
+
+    function get_image_id() {
+        return $this->pid;
+    }
+}
+
+function new_royalslider_add_custom_variables($m, $data, $options) {
+    $helper = new RoyalSliderLGARendererHelper($data, $options);
+    $m->addHelper('lga', $helper);
+}
+add_filter('new_rs_slides_renderer_helper', 'new_royalslider_add_custom_variables', 10, 4);
+
+function get_image_details() {
+  echo nggcf_get_field($_GET['pid'], 'Process Text');
+  die();
+}
+
+add_action('wp_ajax_get_image_details', 'get_image_details');
+add_action('wp_ajax_nopriv_get_image_details', 'get_image_details');
 ?>
