@@ -20,8 +20,7 @@
 .rsLGA .rsSlide,
 .rsLGA .rsVideoFrameHolder,
 .rsLGA .rsThumbs {
-	background: #222;
-	color: #FFF;
+	color: black;
 }
 
 
@@ -92,7 +91,7 @@
 	margin: 0 auto; 
 
 	text-align: center;
-	line-height: 5px;
+	line-height: 15px;
 	overflow: hidden;
 }
 .rsLGA .rsBullet {
@@ -176,12 +175,13 @@
 }
 
 /* Thumbnails with text */
+
 .rsLGA .rsTmb h5 {
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
 	line-height: 20px;
-	color: #FFF;
+	color: dimgray;
 }
 .rsLGA .rsTmb span {
 	color: #DDD;
@@ -451,9 +451,27 @@
 
 	background: #222;
 
-	color: #FFF;
+	color: dimgray;
 	padding: 2px 8px;
 	width: auto;
 	font-size: 12px;
 	border-radius: 2px;
+}
+
+
+.rsContentSlider h3 {
+  font-size: 14px;
+  line-height: 1;
+  margin: 12px 0 8px;
+  font-weight: normal;
+}
+.rsContentSlider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.rsContentSlider h3,
+.rsContentSlider p {
+	width: 90%;
+	margin-left: 0;
 }
