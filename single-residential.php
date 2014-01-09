@@ -35,27 +35,39 @@
 
 <script type="text/javascript">
   jQuery(document).ready(function($) {
-  	var slider = jQuery(".royalSlider").data('royalSlider');
-  	slider.ev.on('rsAfterSlideChange',
+    var slider = jQuery(".royalSlider").data('royalSlider');
+    var savedInfo;
+    slider.ev.on('rsAfterSlideChange',
       function(event) {
+        if ((slider.currSlideId == 0) && savedInfo) {
+          jQuery("#info").html(savedInfo);
+          return;
+        }
         var pid = slider.currSlide.content.attr('data-image_id');
         $.ajax({
               type: "GET",
               url: "<?php echo admin_url('admin-ajax.php') ?>",
               dataType: "html",
               data: ({ action: "get_image_details", pid: pid}),
-              success: function(data) {
-	            var infoDiv = jQuery("#info");
-	            var position = infoDiv.position();
-	            var newInfoDiv = document.createElement("div");
-	            newInfoDiv.setAttribute("id", "new-info");
-	            newInfoDiv.style.position = "absolute";
-	            newInfoDiv.style.top = "0px";
-	            newInfoDiv.style.left = "0px";
-	            newInfoDiv.innerHTML = data;
-	            infoDiv.after(newInfoDiv);
-	            jQuery("#new-info").hide().fadeIn(500);
-	            infoDiv.fadeOut(100);
+              success: function(info) {
+                var infoDiv = jQuery("#info");
+                var position = infoDiv.position();
+                var newInfoDiv = document.createElement("div");
+                newInfoDiv.setAttribute("id", "new-info");
+                newInfoDiv.style.position = "absolute";
+                newInfoDiv.style.top = infoDiv.parent().css("padding-top");
+                newInfoDiv.style.left = infoDiv.parent().css("padding-left");
+                newInfoDiv.innerHTML = info;
+                infoDiv.after(newInfoDiv);
+                newInfoDiv = jQuery("#new-info");
+                infoDiv.fadeOut(100);
+                newInfoDiv.hide().fadeIn(500, function() {
+                  if (!savedInfo)
+                    savedInfo = infoDiv.html();
+                  infoDiv.html(info);
+                  infoDiv.show();
+                  newInfoDiv.remove();
+                });
               }
           }
         )

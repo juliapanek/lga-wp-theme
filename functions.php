@@ -65,7 +65,20 @@ function new_royalslider_add_custom_variables($m, $data, $options) {
 add_filter('new_rs_slides_renderer_helper', 'new_royalslider_add_custom_variables', 10, 4);
 
 function get_image_details() {
-  echo nggcf_get_field($_GET['pid'], 'Process Text');
+  $image = nggcf_get_field($_GET['pid'], 'Image');
+  if (!empty($image))
+    echo '<img src="' . $image . '" width="80%"></img>';
+
+  $caption = nggcf_get_field($_GET['pid'], 'Caption');
+  if (!empty($caption))
+    echo '<h2>' . $caption . '</h2>';
+
+  $text = nggcf_get_field($_GET['pid'], 'Process Text');
+  if (!empty($caption))
+    echo '<p>' . $text . '</p>';
+
+  echo '<img src="' . wp_get_attachment_url(104) . '" width="' . rand(50, 300) . '"></img>';
+
   die();
 }
 
