@@ -7,13 +7,17 @@
 			        <li id="commercial" class="menu_main">commercial
 			          <ul class="commercial_projects">
 
-<?php 				$com = new WP_Query("post_type=commercial"); 
+<?php
+					if ($expandSubMenu == "commercial")
+					   $liClass = "com menu_sub";
+					else
+					   $liClass = "com menu_sub hide";
+
+					$com = new WP_Query("post_type=commercial"); 
 					if ($com->have_posts() ) { 
 						while ( $com->have_posts() ) {
 							$com->the_post();
-						echo '<li class="com menu_sub hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
-
-				
+							echo '<li class="' . $liClass . '"><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
 						}
 					}
 					wp_reset_postdata(); 
@@ -23,14 +27,17 @@
 			        <li id="institutional" class="menu_main">institutional
 			          <ul class="institutional_projects">
 
-<?php 				$inst = new WP_Query("post_type=institutional"); 
+<?php
+					if ($expandSubMenu == "institutional")
+					   $liClass = "inst menu_sub";
+					else
+					   $liClass = "inst menu_sub hide";
+
+					$inst = new WP_Query("post_type=institutional"); 
 					if ($inst->have_posts() ) {
 						while ( $inst->have_posts() ) {
 							$inst->the_post();
-							
-						echo '<li class="inst menu_sub hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
-
-				
+							echo '<li class="' . $liClass . '"><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
 						}
 					}
 					wp_reset_postdata(); 
@@ -40,36 +47,42 @@
 			        <li id="residential" class="menu_main">residential
 			        <ul class="residential_projects">
 
-<?php 				$res = new WP_Query("post_type=residential"); 
+<?php
+					if ($expandSubMenu == "residential")
+					   $liClass = "res menu_sub";
+					else
+					   $liClass = "res menu_sub hide";
+
+					$res = new WP_Query("post_type=residential"); 
 					if ($res->have_posts() ) {
 						while ( $res->have_posts() ) {
 							$res->the_post();
-							
-						echo '<li class="res menu_sub hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
-
-				
+							echo '<li class="' . $liClass . '"><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
 						}
 					}
 					wp_reset_postdata(); 
 ?> 
 			        </ul>
-			        </li> <!-- end of residential -->
-			      </ul><!-- end of project option -->
-<!--end of projects-->
+			        </li>
+			      </ul>
+
 		    <h2 id="studio_menu">Studio</h2>
 			      <ul class="studio_option">
 			        <li class="menu_main">firm profile</li>
 			        <li class="menu_main" id="people">people
 			          <ul>
 
-<?php 				$com = new WP_Query("post_type=people"); 
+<?php
+					if ($expandSubMenu == "people")
+					   $liClass = "ppl menu_sub";
+					else
+					   $liClass = "ppl menu_sub hide";
+
+					$com = new WP_Query("post_type=people"); 
 					if ($com->have_posts() ) {
 						while ( $com->have_posts() ) {
 							$com->the_post();
-							
-						echo '<li class="ppl menu_sub hide"><a href="'.get_permalink().'">'.get_the_title().'</a></li>'; 
-
-				
+							echo '<li class="' . $liClass . '"><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
 						}
 					}
 					wp_reset_postdata(); 
@@ -78,7 +91,6 @@
 			        </li>
 			        <li class="menu_main">contact</li>
 			      </ul>
-		    <!-- end of studio -->
 	  </ul>
 	</div>
 </nav>

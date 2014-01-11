@@ -1,6 +1,8 @@
 </div>
 </div>
-<?php get_sidebar(); ?>
+<?php
+	include 'sidebar.php'
+?>
 </div>
 </div>
 

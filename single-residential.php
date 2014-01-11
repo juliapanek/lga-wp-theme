@@ -76,4 +76,8 @@
   });
 </script>
 
-<?php get_footer(); ?>
+<?php
+    if (!$expandSubMenu)
+       $expandSubMenu = "residential";
+    include 'footer.php'
+?>

@@ -1,1 +1,4 @@
-<?php include 'single-residential.php' ?>
+<?php
+	$expandSubMenu = "commercial";
+	include 'single-residential.php'
+?>
