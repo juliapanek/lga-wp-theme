@@ -78,7 +78,7 @@
 					else
 					   $liClass = "ppl menu_sub hide";
 
-					$ppl = new WP_Query("post_type=people"); 
+					$ppl = new WP_Query(array("post_type"=>"people", "order"=>"ASC")); 
 					if ($ppl->have_posts() ) {
 						while ( $ppl->have_posts() ) {
 							$ppl->the_post();
