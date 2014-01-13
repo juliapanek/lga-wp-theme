@@ -14,6 +14,7 @@ function enqueue_scripts() {
         wp_enqueue_script('jquery');
         wp_enqueue_script('bootstrap', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js', null, null, true);
         wp_enqueue_script('lga-menu', get_bloginfo('template_url') . '/js/menu.js', null, null, true);
+        wp_enqueue_script('lga-slider', get_bloginfo('template_url') . '/js/slider.js', null, null, true);
     }
 }
 add_action('init', 'enqueue_scripts');
@@ -66,18 +67,20 @@ add_filter('new_rs_slides_renderer_helper', 'new_royalslider_add_custom_variable
 
 function get_image_details() {
   $image = nggcf_get_field($_GET['pid'], 'Image');
-  if (!empty($image))
-    echo '<img src="' . $image . '" width="80%"></img>';
+  $imageWidth = nggcf_get_field($_GET['pid'], 'Image Width %');
+  if (!empty($image)) {
+    if (empty($imageWidth))
+      $imageWidth = "100";
+    echo '<img src="' . $image . '" width="' . $imageWidth . '%"></img>';
+  }
 
   $caption = nggcf_get_field($_GET['pid'], 'Caption');
   if (!empty($caption))
     echo '<h2>' . $caption . '</h2>';
 
   $text = nggcf_get_field($_GET['pid'], 'Process Text');
-  if (!empty($caption))
+  if (!empty($text))
     echo '<p>' . $text . '</p>';
-
-  echo '<img src="' . wp_get_attachment_url(104) . '" width="' . rand(50, 300) . '"></img>';
 
   die();
 }

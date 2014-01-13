@@ -36,11 +36,15 @@
 <script type="text/javascript">
   jQuery(document).ready(function($) {
     var slider = jQuery(".royalSlider").data('royalSlider');
-    var savedInfo;
+    if (!slider)
+      return;
+
     slider.ev.on('rsAfterSlideChange',
       function(event) {
-        if ((slider.currSlideId == 0) && savedInfo) {
-          jQuery("#info").html(savedInfo);
+        if ((slider.currSlideId == 0) ||
+            (jQuery("#info").parents(".content").outerWidth() ==
+             jQuery("#header").outerWidth())) {
+          removeOverlayDiv("info");
           return;
         }
         var pid = slider.currSlide.content.attr('data-image_id');
@@ -49,25 +53,8 @@
               url: "<?php echo admin_url('admin-ajax.php') ?>",
               dataType: "html",
               data: ({ action: "get_image_details", pid: pid}),
-              success: function(info) {
-                var infoDiv = jQuery("#info");
-                var position = infoDiv.position();
-                var newInfoDiv = document.createElement("div");
-                newInfoDiv.setAttribute("id", "new-info");
-                newInfoDiv.style.position = "absolute";
-                newInfoDiv.style.top = infoDiv.parent().css("padding-top");
-                newInfoDiv.style.left = infoDiv.parent().css("padding-left");
-                newInfoDiv.innerHTML = info;
-                infoDiv.after(newInfoDiv);
-                newInfoDiv = jQuery("#new-info");
-                infoDiv.fadeOut(100);
-                newInfoDiv.hide().fadeIn(500, function() {
-                  if (!savedInfo)
-                    savedInfo = infoDiv.html();
-                  infoDiv.html(info);
-                  infoDiv.show();
-                  newInfoDiv.remove();
-                });
+              success: function(html) {
+                replaceOverlayDiv("info", html);
               }
           }
         )
@@ -76,4 +63,8 @@
   });
 </script>
 
-<?php get_footer(); ?>
+<?php
+    if (!isset($expandSubMenu))
+       $expandSubMenu = "residential";
+    include 'footer.php'
+?>

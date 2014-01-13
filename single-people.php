@@ -45,4 +45,7 @@
 		</div>
 </div>
 
-<?php get_footer(); ?>
+<?php
+	$expandSubMenu = "people";
+	include 'footer.php'
+?>

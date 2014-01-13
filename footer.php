@@ -1,9 +1,13 @@
 </div>
 </div>
-<?php get_sidebar(); ?>
+<?php
+	include 'sidebar.php'
+?>
 </div>
 </div>
 
+<div id="push"></div>
+</div>
 
 <footer>
 	<div id="footer">
