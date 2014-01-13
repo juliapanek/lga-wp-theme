@@ -322,14 +322,21 @@ h2#studio_menu {
 	width: 50%;
 }
 
-.image_list_item {
+.left_image_list {
 	width: 50%;
-	padding: 0 2% 2% 2%;
 	float: left;
+	padding-right: 2%;
+}
+
+.right_image_list {
+	width: 50%;
+	float: right;
+	padding-left: 2%;
 }
 
 .list_image {
-	width: 100%
+	width: 100%;
+	margin-bottom: 20px;
 }
 
 .credit_left {
