@@ -6,6 +6,8 @@
 </div>
 </div>
 
+<div id="push"></div>
+</div>
 
 <footer>
 	<div id="footer">

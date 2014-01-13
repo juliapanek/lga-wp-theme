@@ -11,11 +11,13 @@
 
 <body>
 
+<div id="wrapper">
+
 <div id="header">
 	<h1>Leslie Gill Architect</h1>
 </div>
 
-<div class="container">
+<div id="container" class="container">
 
 <div id="header_content">
 	<div class="row">
