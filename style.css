@@ -74,11 +74,22 @@ ul {
 .location {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	font-size: 12px;
+	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: gray;
 	padding: 0;
-	margin: 0 0 15px 0;
+	margin: 0;
+}
+
+.license {
+	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: gray;
+	padding: 0;
+	margin: 0;
 }
 
 .resume_section {
@@ -294,14 +305,23 @@ h2#studio_menu {
 	display: block;
 }
 
+.logo {
+	width: 300px;
+	display: none;
+}
+
 .logo_right {
 	float: left;
-	margin: 0 0 0 -20px;
+	margin: 0;
+	padding: 0;
+	width: 150px;
 }
 
 .logo_left {
 	float: right; 
-	margin: 0 0 0 20px;
+	margin: 0;
+	padding: 0;
+	width: 150px;
 }
 
 .content {
@@ -314,6 +334,7 @@ h2#studio_menu {
 
 .bio_image {
 	width: 50%;
+	margin: 15px 0 0 0;
 }
 
 .image_list_item {
@@ -387,9 +408,37 @@ footer {
 		margin: 0;
 	}
 
+	#header_content {
+		padding-left: 0;
+	}
+
+	.logo_left {
+		display: none;
+
+	}
+
+	.logo_right {
+		display: none;
+	}
+
+	.logo {
+		display: block;
+	}
+
+	.col-xs-7 {
+		width: 0;
+	}
+
+	#menu {
+		padding-top: 0px;
+	}
 }
 
-@media(min-width:992px) {
+@media(min-width:980px) {
+
+	#menu {
+		padding-top: 40px;
+	}
 
 }
 
