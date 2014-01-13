@@ -46,7 +46,6 @@
 </div>
 
 <?php
-	if (!$expandSubMenu)
-	   $expandSubMenu = "people";
+	$expandSubMenu = "people";
 	include 'footer.php'
 ?>

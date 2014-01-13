@@ -78,10 +78,10 @@
 					else
 					   $liClass = "ppl menu_sub hide";
 
-					$com = new WP_Query("post_type=people"); 
-					if ($com->have_posts() ) {
-						while ( $com->have_posts() ) {
-							$com->the_post();
+					$ppl = new WP_Query("post_type=people"); 
+					if ($ppl->have_posts() ) {
+						while ( $ppl->have_posts() ) {
+							$ppl->the_post();
 							echo '<li class="' . $liClass . '"><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
 						}
 					}

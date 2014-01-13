@@ -77,7 +77,7 @@
 </script>
 
 <?php
-    if (!$expandSubMenu)
+    if (!isset($expandSubMenu))
        $expandSubMenu = "residential";
     include 'footer.php'
 ?>
