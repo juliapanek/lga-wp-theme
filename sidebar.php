@@ -68,7 +68,7 @@
 
 		    <h2 id="studio_menu">Studio</h2>
 			      <ul class="studio_option">
-			        <li class="menu_main">firm profile</li>
+			        <li class="menu_main"><a href="/firm/profile/">firm profile</a></li>
 			        <li class="menu_main" id="people">people
 			          <ul>
 
@@ -89,7 +89,7 @@
 ?> 
 			          </ul>
 			        </li>
-			        <li class="menu_main">contact</li>
+			        <li class="menu_main"><a href="/firm/contact/">contact</a></li>
 			      </ul>
 	  </ul>
 	</div>
