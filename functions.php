@@ -67,8 +67,12 @@ add_filter('new_rs_slides_renderer_helper', 'new_royalslider_add_custom_variable
 
 function get_image_details() {
   $image = nggcf_get_field($_GET['pid'], 'Image');
-  if (!empty($image))
-    echo '<img src="' . $image . '" width="80%"></img>';
+  $imageWidth = nggcf_get_field($_GET['pid'], 'Image Width %');
+  if (!empty($image)) {
+    if (empty($imageWidth))
+      $imageWidth = "100";
+    echo '<img src="' . $image . '" width="' . $imageWidth . '%"></img>';
+  }
 
   $caption = nggcf_get_field($_GET['pid'], 'Caption');
   if (!empty($caption))
