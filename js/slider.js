@@ -1,44 +1,47 @@
-function removeTopInfo() {
-  var info = jQuery("#info");
+function removeOverlayDiv(id) {
+  var div = jQuery("#" + id);
 
-  var topInfo = jQuery("#top-info-a");
-  if (!topInfo.length)
-     topInfo = jQuery("#top-info-b");
+  var overlay = jQuery("#" + id + "-overlay-a");
+  if (!overlay.length)
+     overlay = jQuery("#" + id + "-overlay-b");
 
-  if (topInfo.length) {
-    topInfo.fadeOut(100, function() {
-      topInfo.remove();
+  if (overlay.length) {
+    overlay.fadeOut(100, function() {
+      overlay.remove();
     });
-    info.fadeIn(500);
+    div.fadeIn(500);
   }
 }
 
-function replaceTopInfo(html) {
-  var info = jQuery("#info");
+function replaceOverlayDiv(id, html) {
+  var div = jQuery("#" + id);
 
-  var newTopInfo = document.createElement("div");
-  newTopInfo.setAttribute("id", "top-info-a");
+  var aId = id + "-overlay-a";
+  var bId = id + "-overlay-b";
 
-  var topInfo = jQuery("#top-info-a");
-  if (topInfo.length)
-    newTopInfo.setAttribute("id", "top-info-b");
+  var newOverlay = document.createElement("div");
+  newOverlay.setAttribute("id", aId);
+
+  var overlay = jQuery("#" + aId);
+  if (overlay.length)
+    newOverlay.setAttribute("id", bId);
   else
-     topInfo = jQuery("#top-info-b");
+    overlay = jQuery("#" + bId);
 
-  newTopInfo.style.position = "absolute";
-  newTopInfo.style.top = info.parent().css("padding-top");
-  newTopInfo.style.left = info.parent().css("padding-left");
-  newTopInfo.innerHTML = html;
+  newOverlay.style.position = "absolute";
+  newOverlay.style.top = div.parent().css("padding-top");
+  newOverlay.style.left = div.parent().css("padding-left");
+  newOverlay.innerHTML = html;
 
-  info.after(newTopInfo);
-  newTopInfo = jQuery(newTopInfo.getAttribute("id"));
+  div.after(newOverlay);
+  newOverlay = jQuery(newOverlay.getAttribute("id"));
 
-  if (topInfo.length)
-    topInfo.fadeOut(100, function() {
-      topInfo.remove();
+  if (overlay.length)
+    overlay.fadeOut(100, function() {
+      overlay.remove();
     });
   else
-    info.fadeOut(100);
+    div.fadeOut(100);
 
-  newTopInfo.hide().fadeIn(500);
+  newOverlay.hide().fadeIn(500);
 }

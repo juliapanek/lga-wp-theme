@@ -41,8 +41,10 @@
 
     slider.ev.on('rsAfterSlideChange',
       function(event) {
-        if (slider.currSlideId == 0) {
-          removeTopInfo();
+        if ((slider.currSlideId == 0) ||
+            (jQuery("#info").parents(".content").outerWidth() ==
+             jQuery("#header").outerWidth())) {
+          removeOverlayDiv("info");
           return;
         }
         var pid = slider.currSlide.content.attr('data-image_id');
@@ -52,7 +54,7 @@
               dataType: "html",
               data: ({ action: "get_image_details", pid: pid}),
               success: function(html) {
-                replaceTopInfo(html);
+                replaceOverlayDiv("info", html);
               }
           }
         )
