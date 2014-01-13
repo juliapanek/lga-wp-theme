@@ -6,6 +6,7 @@
 </div>
 </div>
 
+
 <footer>
 	<div id="footer">
 		<p class="contact">277 Broadway&emsp;Suite 100&emsp;New York&ensp;NY 10007</p>
