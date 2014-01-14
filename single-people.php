@@ -3,8 +3,8 @@
 <div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-6 col-lg-push-6">
 	
 		<p class="title"><?php the_field('name'); ?></p>
-		<h1 class="location"><?php the_field('role'); ?></h1>
-		<h1 class="location"><?php the_field('license'); ?></h1>
+		<p class="location"><?php the_field('role'); ?></p>
+		<p class="license"><?php the_field('license'); ?></p>
 
 <?php
 		if (get_field('image')) {

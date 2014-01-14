@@ -20,6 +20,7 @@
 <div id="container" class="container">
 
 <div id="header_content">
+	<img class="logo" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill-architect.png" alt="leslie gill architect">
 	<div class="row">
 		<div class="col-xs-7">
 			<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
