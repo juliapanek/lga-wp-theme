@@ -19,6 +19,10 @@ body {
 	font-size: 16px;
 }
 
+.column-container {
+	margin: 40px 0 0 0;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
@@ -112,23 +116,31 @@ li.resume {
 	padding: 0 0 40px 0;
 }
 
-.caption {
-	-webkit-font-smoothing: antialiased;
-	letter-spacing: 1px;
-	font-size: 13px;
-	text-transform: uppercase;
-	color: dimgray;
-	padding-top: 10px;
-	margin: 0;
-}
-
-.contact {
+.caption_title {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
-	font-size: 10px;
+	font-size: 16px;
 	line-height: .5;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	color: dimgray;
+}
+
+.caption {
+	font-family: ScalaWeb, serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 16px;
+	line-height: 1.4;
+	color: black;
+	margin: 0;
+}
+
+.contact {
+	font-family: "News Gothic", 'Arial Narrow', sans-serif;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: gray;
 }
 
 .intro {
@@ -138,6 +150,7 @@ li.resume {
 	line-height: 1.5;
 	color: black;
 	padding-bottom: 18px;
+	margin: 0 0 20px 0;
 	border-bottom: 1px solid rgb(242, 134, 39);
 }
 
@@ -147,7 +160,9 @@ li.resume {
 	font-size: 15px;
 	line-height: 1.6;
 	color: black;
-	margin-top: 20px;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
 }
 
 .larger {
@@ -164,7 +179,7 @@ li.resume {
 	text-transform: uppercase;
 	color: dimgray;
 	font-size: 13px;
-	line-height: 1.5; 
+	line-height: 1.2; 
 
 }
 
@@ -360,17 +375,30 @@ h2#studio_menu {
 	margin-bottom: 20px;
 }
 
+/* CV */ 
+
+table {
+	width: 100%;
+	margin-top: 20px;
+}
+
+table td {
+	width: 50%;
+}
+
+table td, table td * {
+    vertical-align: top;
+}
+
 .credit_left {
-	width: 30%;
-	float: left;
-	padding: 0 10% 0 0;
-	margin: 10px 0 0 0;
+	width: 40%;
+	padding-right: 2%;
+
 }
 
 .credit_right {
-	width: 60%;
-	float: left;
-	margin: 10px 0 0 0;
+	width: 58%;
+
 }
 
 .cv_container {
@@ -384,6 +412,7 @@ h2#studio_menu {
 #footer {
 	background-color: whitesmoke;
 	width: 100%;
+	height: 200px;
 	text-align: left;
 	padding: 1em 1em 1em 1em;
 }
@@ -446,7 +475,7 @@ h2#studio_menu {
 	}
 }
 
-@media(min-width:980px) {
+@media(max-width:980px) {
 
 	#menu {
 		padding-top: 40px;
@@ -461,5 +490,6 @@ h2#studio_menu {
 	}
 
 }
+
 
 

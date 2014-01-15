@@ -1,5 +1,6 @@
 <nav>
 	<div id="menu" class="col-xs-12 col-lg-2 col-lg-pull-10">
+	<div class="column-container">
 	  <ul class="noindent">
 		    <h2 id="project_menu">Projects</h2>
 			      <ul class="project_option">
@@ -92,5 +93,6 @@
 			        <li class="menu_main"><a href="/firm/contact/">contact</a></li>
 			      </ul>
 	  </ul>
+	 </div>
 	</div>
 </nav>
