@@ -137,8 +137,9 @@ li.resume {
 .contact {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif;
 	font-size: 12px;
-	line-height: 1;
+	line-height: 1.4;
 	letter-spacing: 1px;
+	margin: 0;
 	text-transform: uppercase;
 	color: gray;
 }
@@ -152,6 +153,17 @@ li.resume {
 	padding-bottom: 18px;
 	margin: 0 0 20px 0;
 	border-bottom: 1px solid rgb(242, 134, 39);
+}
+
+.tagline {
+	font-family: ScalaWeb, serif;
+	-webkit-font-smoothing: antialiased;
+	font-style: italic;
+	font-size: 18px;
+	line-height: 1.5;
+	color: dimgray;
+	margin: 20px 0 15px 0;
+	
 }
 
 .normal {
@@ -183,11 +195,16 @@ li.resume {
 
 }
 
+.space {
+	padding-bottom: 20px;
+}
+
 h2 {
 	color: rgb(242, 134, 39);
 	font-size: 17px;
 
 }
+
 
 /* menu */ 
 
@@ -405,6 +422,11 @@ table td, table td * {
 	margin: 10px 0 0 0;
 }
 
+footer {
+	background-color: whitesmoke;
+	width: 100%;
+}
+
 #footer, #push {
     height: 4em;
 }
@@ -414,7 +436,7 @@ table td, table td * {
 	width: 100%;
 	height: 200px;
 	text-align: left;
-	padding: 1em 1em 1em 1em;
+	margin: 5em 1em 1em 0;
 }
 
 @media(max-width:768px){
@@ -475,18 +497,24 @@ table td, table td * {
 	}
 }
 
-@media(max-width:980px) {
+@media(max-width:1199px) {
 
 	#menu {
-		padding-top: 40px;
+		padding: 35px 0 0 15px;
+		margin-top: 40px;
 	}
 
+	.column-container {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 @media(min-width:1200px){
 
 	#menu {
 	border-top: none;
+
 	}
 
 }

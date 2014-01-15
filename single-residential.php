@@ -5,6 +5,7 @@
   	 <div id="info">
   		<p class="title"><?php the_field('name'); ?></p>
   		<p class="location"><?php the_field('location'); ?></p>
+      <p class="tagline"><?php the_field('tagline'); ?></p>
   		<p class="intro"><?php the_field('intro_paragraph_1'); ?></p>
   		<p class="normal"><?php the_field('intro_paragraph_2'); ?></p>
 

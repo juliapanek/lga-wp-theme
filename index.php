@@ -4,12 +4,16 @@
 </div>
 
 <div class="content col-xs-12 col-sm-7 col-sm-pull-5 col-lg-6 col-lg-pull-6">
-<?php 
-				$img = get_field('home_image');
-				echo '<img class="full" src="' . $img['url'] . '">';
+	<div class="column-container">
+	
+	<?php 
+					$img = get_field('home_image');
+					echo '<img class="full" src="' . $img['url'] . '">';
 
-echo nggcf_get_field(3, 'Process Text');
-?>
+	echo nggcf_get_field(3, 'Process Text');
+	?>
+
+	</div>
 </div>
 
 <?php get_footer(); ?>
