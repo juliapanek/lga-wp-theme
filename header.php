@@ -2,8 +2,13 @@
 <html lang="en"> 
 
 <head>
-	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
-	<meta name="Leslie Gill Architect" content="Leslie Gill Architect is a New York City-based design and architecture firm">  
+	<title><?php
+	  global $pageTitle;
+	  if ( !empty($pageTitle) )
+        echo $pageTitle . ' | ';
+      echo 'Leslie Gill Architect';
+    ?></title>
+	<meta name="description" content="Leslie Gill Architect is a New York City-based architecture and interior-design firm.">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
