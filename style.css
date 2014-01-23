@@ -33,6 +33,7 @@ ul {
 	height: 40px;
 	width: 100%;
 	position: absolute;
+	z-index: -1;
 	background-color: rgb(254, 254, 254);
 	border-top: 2px solid rgb(242, 134, 39);
 }
@@ -351,7 +352,6 @@ a:hover {
 }
 
 .logo {
-	width: 300px;
 	display: none;
 }
 
