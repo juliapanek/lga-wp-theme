@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+  global $pageTitle;
+  $pageTitle = get_field('name') . ', ' . get_field('role') ;
+  get_header();
+?>
 
 <div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-6 col-lg-push-6">
 	<div class="column-container">

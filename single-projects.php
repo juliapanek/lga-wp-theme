@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+  global $pageTitle;
+  $pageTitle = 'Full Project List';
+  get_header();
+?>
 
 <div class="column-container">
 <div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-6 col-lg-push-6">
