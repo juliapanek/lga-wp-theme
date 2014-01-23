@@ -406,8 +406,6 @@
 	height: 32px;
 	background: url('rs-lga.png') -64px 0;
 	background-color: #383838;
-	background-color: rgba(0,0,0,0.75);
-	*background-color: #383838;
 }
 .rsLGA .rsCloseVideoIcn:hover {
 	background-color: rgba(0,0,0,0.9);

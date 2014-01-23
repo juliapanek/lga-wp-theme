@@ -1,32 +1,35 @@
 <?php get_header(); ?>
 
+<div class="column-container">
 <div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-6 col-lg-push-6">
-		<div class="projects">
+	<div class="projects">
+		<p class="projects_category">Commercial and Institutional Projects</p><br>
 <?php
-			if (get_field('commercial_institutional')) {
-				echo '<ul>';
-				 
-				while (has_sub_field('commercial_institutional')) {
-					echo '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li>';
-			   }
-			   
-				echo '</ul>';
-			}
+		if (get_field('commercial_institutional')) {
+			echo '<ul>';
+			 
+			while (has_sub_field('commercial_institutional')) {
+				echo '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li>';
+		   }
+		   
+			echo '</ul>';
+		}
 ?>
-		</div>
-		<div class="projects">
+	</div>
+	<div class="projects">
+		<p class="projects_category">Residential Projects</p><br>
 <?php
-			if (get_field('residential')) {
-				echo '<ul>';
-				 
-				while (has_sub_field('residential')) {
-					echo '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li>';
-			   }
-			   
-				echo '</ul>';
-			}
+		if (get_field('residential')) {
+			echo '<ul>';
+			 
+			while (has_sub_field('residential')) {
+				echo '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li>';
+		   }
+		   
+			echo '</ul>';
+		}
 ?>
-		</div>
+	</div>
 </div>
 
 <div class="content col-xs-12 col-sm-7 col-sm-pull-5 col-lg-6 col-lg-pull-6">
@@ -45,17 +48,18 @@
 	</div>
 	<div class="right_image_list">
 <?php
-			if (get_field('images_rt')) {
-				echo '<ul>';
-				while (has_sub_field('images_rt')) {
-					$image = get_sub_field('image_rt');
-					echo '<li><img class="list_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/></li>';
-		   		}
+				if (get_field('images_rt')) {
+					echo '<ul>';
+					while (has_sub_field('images_rt')) {
+						$image = get_sub_field('image_rt');
+						echo '<li><img class="list_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/></li>';
+			   		}
 
-				echo '</ul>';
-			}
+					echo '</ul>';
+				}
 ?>
 	</div>
+</div>
 </div>
 
 <?php get_footer(); ?>

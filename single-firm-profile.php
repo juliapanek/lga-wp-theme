@@ -13,7 +13,10 @@
 
 <div class="content col-xs-12 col-sm-7 col-sm-pull-5 col-lg-6 col-lg-pull-6">
 	<div class="column-container">
-	images
+<?php
+	$image = get_field('image');
+	echo '<img class="list_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
+?>
 	</div>
 </div>
 

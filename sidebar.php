@@ -2,7 +2,7 @@
 	<div id="menu" class="col-xs-12 col-lg-2 col-lg-pull-10">
 	<div class="column-container">
 	  <ul class="noindent">
-		    <h2 id="project_menu">Projects</h2>
+		    <p id="project_menu" class="menu">Projects</p>
 			      <ul class="project_option">
 			       <a href="http://69.195.124.62/~lesliegi/projects/list/"> <li class="menu_main">full list</li></a>
 			        <li id="commercial" class="menu_main">commercial
@@ -67,7 +67,7 @@
 			        </li>
 			      </ul>
 
-		    <h2 id="studio_menu">Studio</h2>
+		    <p id="studio_menu" class="menu">Studio</p>
 			      <ul class="studio_option">
 			        <li class="menu_main"><a href="/firm/profile/">firm profile</a></li>
 			        <li class="menu_main" id="people">people

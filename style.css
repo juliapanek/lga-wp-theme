@@ -37,6 +37,7 @@ ul {
 	border-top: 2px solid rgb(242, 134, 39);
 }
 
+
 #header h1 {
 	font-size: 6px;
 	visibility: hidden;
@@ -71,8 +72,8 @@ ul {
 
 .title {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
-	font-weight: 600;
-	font-size: 14px;
+	font-weight: normal; 
+	font-size: 17px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	line-height: 1;
@@ -83,8 +84,8 @@ ul {
 
 .location {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
-	font-size: 12px;
-	font-weight: 600;
+	font-size: 13px;
+	font-weight: normal;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: gray;
@@ -102,12 +103,12 @@ ul {
 	margin: 0;
 }
 
-.resume_section {
+.resume_section, .projects_category {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: dimgray;
+	color: rgb(242, 134, 39);
 	padding: 0;
 	margin: 0;
 }
@@ -116,8 +117,10 @@ li.resume {
 	padding: 0 0 40px 0;
 }
 
-.caption_title {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
+h1.caption_title {
+	font-family: 'News Gothic Regular', 'Arial Narrow', sans-serif, sans-serif !important;
+    font-style: normal !important;
+    font-weight: normal !important;
 	font-size: 16px;
 	line-height: .5;
 	letter-spacing: 1px;
@@ -136,7 +139,7 @@ li.resume {
 
 .contact {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif;
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 1.4;
 	letter-spacing: 1px;
 	margin: 0;
@@ -162,7 +165,7 @@ li.resume {
 	font-size: 18px;
 	line-height: 1.5;
 	color: dimgray;
-	margin: 20px 0 15px 0;
+	margin: 20px 0 0 0;
 	
 }
 
@@ -200,8 +203,10 @@ li.resume {
 }
 
 h2 {
+	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	color: rgb(242, 134, 39);
 	font-size: 17px;
+	font-weight:normal;
 
 }
 
@@ -276,10 +281,11 @@ a:hover {
 }
 
 .menu {
-	font-family: "News Gothic Demi", 'Arial Narrow', sans-serif; 
-	font-weight: 600; 
+	font-family: "News Gothic Regular", 'Arial Narrow', sans-serif; 
+	color: rgb(242, 134, 39);
+	font-size: 17px;
+	font-weight:normal;
 	text-transform: capitalize;
-	color: black;
 	padding: 5px 0 5px 0;
 	margin: 0 0 0 10px;
 }
@@ -325,12 +331,13 @@ a:hover {
 
 }
 
-h2#project_menu {
+#project_menu {
 	margin: 0 0 10px 0;
 	padding: 0;
+
 }
 
-h2#studio_menu {
+#studio_menu {
 	margin: 10px 0;
 	padding: 0;
 }
@@ -372,25 +379,26 @@ h2#studio_menu {
 
 .bio_image {
 	width: 50%;
-	margin: 15px 0 0 0;
+	margin: 15px 0 20px 0;
 }
 
 .left_image_list {
-	width: 50%;
+	width: 46%;
 	float: left;
-	padding-right: 2%;
+	padding: 0 2% 0 2%;
 }
 
 .right_image_list {
-	width: 50%;
+	width: 46%;
 	float: right;
-	padding-left: 2%;
+	padding: 0 0 0 4%;
 }
 
 .list_image {
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 100px;
 }
+
 
 /* CV */ 
 
@@ -420,6 +428,15 @@ table td, table td * {
 
 .cv_container {
 	margin: 10px 0 0 0;
+}
+
+.projects {
+	margin: 0 0 40px 0;
+	padding: 0 0 0 60px;
+}
+
+.border-left {
+	border-left: 1px dotted rgb(242, 134, 39);
 }
 
 footer {
@@ -515,6 +532,10 @@ footer {
 	#menu {
 	border-top: none;
 
+	}
+
+	.col-lg-push-6 {
+	padding-left: 40px;
 	}
 
 }
