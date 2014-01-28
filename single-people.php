@@ -7,7 +7,7 @@
 <div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-6 col-lg-push-6">
 	<div class="column-container">
 	
-		<p class="title"><?php the_field('name'); ?></p>
+		<h1 class="title"><?php the_field('name'); ?></h1>
 		<p class="location"><?php the_field('role'); ?></p>
 		<p class="license"><?php the_field('license'); ?></p>
 
@@ -18,7 +18,7 @@
 				echo '<img class="bio_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
 		}
 ?>
-		<p class="normal"><?php the_field('bio'); ?></p>
+		<p class="intro"><?php the_field('bio'); ?></p>
 	</div>
 </div>
 
