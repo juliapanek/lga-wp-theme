@@ -4,7 +4,7 @@
   get_header();
 ?>
 
-<div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-6 col-lg-push-6">
+<div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-5 col-lg-push-7">
   <div class="column-container">
   	 <div id="info">
   		<p class="title"><?php the_field('name'); ?></p>
@@ -31,7 +31,7 @@
   </div>
 </div>
 
-<div class="content col-xs-12 col-sm-7 col-sm-pull-5 col-lg-6 col-lg-pull-6">
+<div class="content col-xs-12 col-sm-7 col-sm-pull-5 col-lg-7 col-lg-pull-5">
   <div class="column-container">
 <?php
         $galleryId = get_field('gallery_id');
