@@ -59,6 +59,10 @@ ul {
 	margin-bottom: 40px;
 }
 
+#info {
+	padding-top: 40px;
+}
+
 /* first for IE 4–8 */
 @font-face {
   font-family: ScalaWeb;
@@ -127,6 +131,14 @@ h1.caption_title {
 	text-transform: uppercase;
 	color: dimgray;
 }
+.list-img-caption {
+	font-family: 'News Gothic Regular', 'Arial Narrow', sans-serif, sans-serif !important;
+	-webkit-font-smoothing: antialiased;
+	font-size: 16px;
+	line-height: 1.4;
+	color: dimgray;
+	margin: 10px 0 80px 0;
+}
 
 .caption {
 	font-family: 'News Gothic Regular', 'Arial Narrow', sans-serif, sans-serif !important;
@@ -150,7 +162,7 @@ h1.caption_title {
 .intro {
 	font-family: ScalaWeb, serif;
 	-webkit-font-smoothing: antialiased;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 1.8;
 	color: black;
 	padding-bottom: 18px;
@@ -172,7 +184,7 @@ h1.caption_title {
 .normal {
 	font-family: ScalaWeb, serif;
 	-webkit-font-smoothing: antialiased;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 1.6;
 	color: black;
 	margin: 0;
@@ -195,11 +207,16 @@ h1.caption_title {
 	color: dimgray;
 	font-size: 13px;
 	line-height: 1.2; 
+	padding-bottom: 7px;
 
 }
 
 .space {
 	padding-bottom: 20px;
+}
+
+.res-space {
+	padding-top: 40px;
 }
 
 h2 {
@@ -339,7 +356,7 @@ a:hover {
 }
 
 #studio_menu {
-	margin: 10px 0;
+	margin: 11px 0;
 	padding: 0;
 }
 

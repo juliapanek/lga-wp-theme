@@ -19,7 +19,7 @@
 			echo '</ul>';
 		}
 ?>
-		<p class="resume_section">Residential Projects</p><br>
+		<p class="resume_section res-space">Residential Projects</p><br>
 <?php
 		if (get_field('residential')) {
 			echo '<ul>';
@@ -42,7 +42,7 @@
 					echo '<ul>';
 					while (has_sub_field('images_lt')) {
 						$image = get_sub_field('image_lt');
-						echo '<li><img class="list_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/><p class="caption">' . $image['title'] . '</p></li>';
+						echo '<li><img class="list_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/><p class="list-img-caption">' . $image['title'] . '</p></li>';
 			   		}
 
 					echo '</ul>';
@@ -55,7 +55,7 @@
 						echo '<ul>';
 						while (has_sub_field('images_rt')) {
 							$image = get_sub_field('image_rt');
-							echo '<li><img class="list_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/><p class="caption">' . $image['title'] . '</p></li>';
+							echo '<li><img class="list_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/><p class="list-img-caption">' . $image['title'] . '</p></li>';
 				   		}
 
 						echo '</ul>';
