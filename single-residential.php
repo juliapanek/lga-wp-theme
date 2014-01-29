@@ -4,7 +4,7 @@
   get_header();
 ?>
 
-<div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-6 col-lg-push-6">
+<div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-5 col-lg-push-7">
   <div class="column-container">
   	 <div id="info">
   		<h1 class="title"><?php the_field('name'); ?></h1>
@@ -31,7 +31,7 @@
   </div>
 </div>
 
-<div class="content col-xs-12 col-sm-7 col-sm-pull-5 col-lg-6 col-lg-pull-6">
+<div class="content col-xs-12 col-sm-7 col-sm-pull-5 col-lg-7 col-lg-pull-5">
   <div class="column-container">
 <?php
         $galleryId = get_field('gallery_id');
@@ -48,14 +48,31 @@
     if (!slider)
       return;
 
-    slider.ev.on('rsAfterSlideChange',
-      function(event) {
-        if ((slider.currSlideId == 0) ||
-            (jQuery("#info").parents(".content").outerWidth() ==
-             jQuery("#header").outerWidth())) {
+    function shouldDisplayProcessInfo() {
+      return (jQuery("#info").parents(".content").outerWidth() !=
+              jQuery("#header").outerWidth());
+		}
+
+    slider.ev.on('rsBeforeMove',
+      function(event, type, userAction) {
+        if (((slider.currSlideId == 1) && (type == "prev")) || 
+            !shouldDisplayProcessInfo()) {
           removeOverlayDiv("info");
           return;
         }
+        else
+          fadeOutCurrentDiv("info", function() {});
+      }
+    );
+
+    slider.ev.on('rsAfterSlideChange',
+      function(event) {
+        if ((slider.currSlideId == 0) || !shouldDisplayProcessInfo()) {
+          return;
+        }
+        var title = '<p class="title">' + slider.currSlide.content.attr('data-image_title') + '</p>';
+        replaceOverlayDiv("info", title, true);
+
         var pid = slider.currSlide.content.attr('data-image_id');
         $.ajax({
               type: "GET",
@@ -63,12 +80,13 @@
               dataType: "html",
               data: ({ action: "get_image_details", pid: pid}),
               success: function(html) {
-                replaceOverlayDiv("info", html);
+                if (html.length)
+                  replaceOverlayDiv("info", title + html, false);
               }
           }
-        )
+        );
       }
-    )
+    );
   });
 </script>
 
