@@ -10,8 +10,6 @@
 		<p class="normal space"><?php the_field('address_line_1'); ?><br><?php the_field('address_line_2'); ?></p>
 		<h1 class="title">Telephone</h1>
 		<p class="normal space"><?php the_field('telephone'); ?></p>
-		<h1 class="title">Fax</h1>
-		<p class="normal space"><?php the_field('fax'); ?></p>
 		<h1 class="title">Email</h1>
 		<p class="normal space"><?php the_field('email'); ?></p>
 	</div>

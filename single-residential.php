@@ -7,7 +7,7 @@
 <div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-5 col-lg-push-7">
   <div class="column-container">
   	 <div id="info">
-  		<p class="title"><?php the_field('name'); ?></p>
+  		<h1 class="title"><?php the_field('name'); ?></h1>
   		<p class="location"><?php the_field('location'); ?></p>
       <p class="tagline"><?php the_field('tagline'); ?></p>
   		<p class="intro"><?php the_field('intro_paragraph_1'); ?></p>
