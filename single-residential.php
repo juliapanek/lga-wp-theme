@@ -48,14 +48,31 @@
     if (!slider)
       return;
 
-    slider.ev.on('rsAfterSlideChange',
-      function(event) {
-        if ((slider.currSlideId == 0) ||
-            (jQuery("#info").parents(".content").outerWidth() ==
-             jQuery("#header").outerWidth())) {
+    function shouldDisplayProcessInfo() {
+      return (jQuery("#info").parents(".content").outerWidth() !=
+              jQuery("#header").outerWidth());
+		}
+
+    slider.ev.on('rsBeforeMove',
+      function(event, type, userAction) {
+        if (((slider.currSlideId == 1) && (type == "prev")) || 
+            !shouldDisplayProcessInfo()) {
           removeOverlayDiv("info");
           return;
         }
+        else
+          fadeOutCurrentDiv("info", function() {});
+      }
+    );
+
+    slider.ev.on('rsAfterSlideChange',
+      function(event) {
+        if ((slider.currSlideId == 0) || !shouldDisplayProcessInfo()) {
+          return;
+        }
+        var title = '<p class="title">' + slider.currSlide.content.attr('data-image_title') + '</p>';
+        replaceOverlayDiv("info", title, true);
+
         var pid = slider.currSlide.content.attr('data-image_id');
         $.ajax({
               type: "GET",
@@ -63,12 +80,13 @@
               dataType: "html",
               data: ({ action: "get_image_details", pid: pid}),
               success: function(html) {
-                replaceOverlayDiv("info", html);
+                if (html.length)
+                  replaceOverlayDiv("info", title + html, false);
               }
           }
-        )
+        );
       }
-    )
+    );
   });
 </script>
 
