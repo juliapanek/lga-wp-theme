@@ -227,6 +227,28 @@ h2 {
 
 }
 
+/* HEADER */ 
+
+.gallery-number {
+	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
+	color: black;
+	font-size: 17px;
+	font-weight:normal;
+	float: left;
+	line-height: .8;
+}
+
+.gallery-arrow {
+	float: right;
+	color: black;
+	font-size: 18px;
+	line-height: .8;
+}
+ 
+.active {
+	color: rgb(242, 134, 39);
+}
+
 
 /* menu */ 
 
@@ -449,7 +471,7 @@ table td, table td * {
 
 .projects {
 	margin: 40px 0 40px 0;
-	padding: 20px 0 0 60px;
+	padding: 40px 0 0 60px;
 	border-left: 1px dotted rgb(242, 134, 39);
 }
 
@@ -542,6 +564,12 @@ footer {
 		margin: 0;
 		padding: 0;
 	}
+
+	.col-xs-7, .col-lg-7 {
+		padding: 0;
+	}
+
+
 }
 
 @media(min-width:1200px){
@@ -552,9 +580,9 @@ footer {
 	}
 
 	.col-xs-7 {
-		padding-left: 0;
+		padding: 0;
 	}
 }
-col-xs-7
+
 
 
