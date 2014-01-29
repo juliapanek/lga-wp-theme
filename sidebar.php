@@ -4,7 +4,26 @@
 	  <ul class="noindent">
 		    <p id="project_menu" class="menu">Projects</p>
 			      <ul class="project_option">
-			       <a href="http://69.195.124.62/~lesliegi/projects/list/"> <li class="menu_main">full list</li></a>
+			      				        <li id="residential" class="menu_main">residential
+			        <ul class="residential_projects">
+
+<?php
+					if ($expandSubMenu == "residential")
+					   $liClass = "res menu_sub";
+					else
+					   $liClass = "res menu_sub hide";
+
+					$res = new WP_Query("post_type=residential"); 
+					if ($res->have_posts() ) {
+						while ( $res->have_posts() ) {
+							$res->the_post();
+							echo '<li class="' . $liClass . '"><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+						}
+					}
+					wp_reset_postdata(); 
+?> 
+			        </ul>
+			        </li>
 			        <li id="commercial" class="menu_main">commercial
 			          <ul class="commercial_projects">
 
@@ -45,26 +64,7 @@
 ?>
 			          </ul>
 			        </li>
-			        <li id="residential" class="menu_main">residential
-			        <ul class="residential_projects">
-
-<?php
-					if ($expandSubMenu == "residential")
-					   $liClass = "res menu_sub";
-					else
-					   $liClass = "res menu_sub hide";
-
-					$res = new WP_Query("post_type=residential"); 
-					if ($res->have_posts() ) {
-						while ( $res->have_posts() ) {
-							$res->the_post();
-							echo '<li class="' . $liClass . '"><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
-						}
-					}
-					wp_reset_postdata(); 
-?> 
-			        </ul>
-			        </li>
+			        <a href="http://69.195.124.62/~lesliegi/projects/list/"> <li class="menu_main">full list</li></a>
 			      </ul>
 
 		    <p id="studio_menu" class="menu">Studio</p>

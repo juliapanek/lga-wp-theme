@@ -87,7 +87,6 @@ ul {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	font-size: 13px;
 	font-weight: normal;
-	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: gray;
 	padding: 0;
@@ -109,7 +108,7 @@ ul {
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: rgb(242, 134, 39);
+	color: dimgray;
 	padding: 0;
 	margin: 0;
 }
@@ -130,22 +129,22 @@ h1.caption_title {
 }
 
 .caption {
-	font-family: ScalaWeb, serif;
+	font-family: 'News Gothic Regular', 'Arial Narrow', sans-serif, sans-serif !important;
 	-webkit-font-smoothing: antialiased;
 	font-size: 16px;
 	line-height: 1.4;
-	color: black;
+	color: dimgray;
 	margin: 0;
 }
 
 .contact {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif;
-	font-size: 11px;
-	line-height: 1.4;
-	letter-spacing: 1px;
-	margin: 0;
+	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
+	font-size: 12px;
 	text-transform: uppercase;
-	color: gray;
+	letter-spacing: 1px;
+	color: dimgray;
+	padding: 0;
+	margin: 0;
 }
 
 .intro {
@@ -397,7 +396,7 @@ a:hover {
 
 .list_image {
 	width: 100%;
-	margin-bottom: 100px;
+	margin: 0;
 }
 
 
@@ -432,8 +431,9 @@ table td, table td * {
 }
 
 .projects {
-	margin: 0 0 40px 0;
-	padding: 0 0 0 60px;
+	margin: 40px 0 40px 0;
+	padding: 20px 0 0 60px;
+	border-left: 1px dotted rgb(242, 134, 39);
 }
 
 .border-left {
@@ -530,11 +530,14 @@ footer {
 @media(min-width:1200px){
 
 	#menu {
-	border-top: none;
+		border-top: none;
 
 	}
 
+	.col-xs-7 {
+		padding-left: 0;
+	}
 }
-
+col-xs-7
 
 
