@@ -30,15 +30,11 @@
 		<div class="col-xs-12 col-lg-2"></div>
 		<div class="col-xs-12 col-lg-10">
 			<div class="row">
-				<div class="col-xs-7">
-					<p class="gallery-number active">1</p>
-					<p class="gallery-number">&emsp;&frasl;&emsp;10</p>
+				<div id="header-column-2" class="col-xs-7">
 					<img class="logo_left" src="<?php bloginfo('template_directory'); ?>/img/leslie-gill.png" alt="leslie gill architect">
 				</div>
-				<div class="col-xs-5">
+				<div id="header-column-3" class="col-xs-5">
 					<img class="logo_right" src="<?php bloginfo('template_directory'); ?>/img/architect.png" alt="leslie gill architect">
-					<p class="gallery-arrow">&rarr;</p>
-					<p class="gallery-arrow">&larr;&emsp;</p>
 				</div>
 			</div>
 		</div>

@@ -43,10 +43,17 @@
 </div>
 
 <script type="text/javascript">
+    var slider;
+
   jQuery(document).ready(function($) {
-    var slider = jQuery(".royalSlider").data('royalSlider');
+    slider = jQuery(".royalSlider").data('royalSlider');
     if (!slider)
       return;
+
+    var header = jQuery("#header-column-2");
+    header.prepend('<p id="gallery-page-num" class="gallery-number active">1</p><p class="gallery-number">&frasl;</p><p id="gallery-page-count" class="gallery-number">' + slider.numSlides + '</p>');
+    header = jQuery("#header-column-3");
+    header.append('<p class="gallery-arrow"><a href="#" onclick="slider.next(); return false;">&rarr;</a></p><p class="gallery-arrow"><a href="#" onclick="slider.prev(); return false;">&larr;</a></p>');
 
     function shouldDisplayProcessInfo() {
       return (jQuery("#info").parents(".content").outerWidth() !=
@@ -58,10 +65,13 @@
     slider.ev.on('rsBeforeMove',
       function(event, type, userAction) {
         var nextSlideId = slider.currSlideId;
-        if (type == "prev")
+
+        if (type == "next")
+          nextSlideId += 1;
+        else if (type == "prev")
           nextSlideId -= 1;
         else
-          nextSlideId += 1;
+          nextSlideId = parseInt(type, 10);
 
         if ((nextSlideId == 0) || !shouldDisplayProcessInfo()) {
           rotator.removeOverlay(nextSlideId);
@@ -75,6 +85,10 @@
     slider.ev.on('rsAfterSlideChange',
       function(event) {
         var slideId = slider.currSlideId;
+
+        var pageNum = jQuery("#gallery-page-num");
+        if (pageNum.length)
+          pageNum.text(slideId + 1);
 
         if ((slideId == 0) || !shouldDisplayProcessInfo())
           return;
