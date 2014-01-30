@@ -14,7 +14,7 @@ function enqueue_scripts() {
         wp_enqueue_script('jquery');
         wp_enqueue_script('bootstrap', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js', null, null, true);
         wp_enqueue_script('lga-menu', get_bloginfo('template_url') . '/js/menu.js', null, null, true);
-        wp_enqueue_script('lga-slider', get_bloginfo('template_url') . '/js/slider.js', null, null, true);
+        wp_enqueue_script('lga-overlays', get_bloginfo('template_url') . '/js/OverlayRotator.js', null, null, true);
     }
 }
 add_action('init', 'enqueue_scripts');

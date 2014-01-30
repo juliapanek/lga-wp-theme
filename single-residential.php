@@ -53,35 +53,44 @@
               jQuery("#header").outerWidth());
 		}
 
+    var rotator = new OverlayRotator("info");
+
     slider.ev.on('rsBeforeMove',
       function(event, type, userAction) {
-        if (((slider.currSlideId == 1) && (type == "prev")) || 
-            !shouldDisplayProcessInfo()) {
-          removeOverlayDiv("info");
+        var nextSlideId = slider.currSlideId;
+        if (type == "prev")
+          nextSlideId -= 1;
+        else
+          nextSlideId += 1;
+
+        if ((nextSlideId == 0) || !shouldDisplayProcessInfo()) {
+          rotator.removeOverlay(nextSlideId);
           return;
         }
-        else
-          fadeOutCurrentDiv("info", function() {});
+        else if (nextSlideId > 0)
+          rotator.beginTransition(nextSlideId);
       }
     );
 
     slider.ev.on('rsAfterSlideChange',
       function(event) {
-        if ((slider.currSlideId == 0) || !shouldDisplayProcessInfo()) {
-          return;
-        }
-        var title = '<p class="title">' + slider.currSlide.content.attr('data-image_title') + '</p>';
-        replaceOverlayDiv("info", title, true);
+        var slideId = slider.currSlideId;
 
-        var pid = slider.currSlide.content.attr('data-image_id');
-        $.ajax({
+        if ((slideId == 0) || !shouldDisplayProcessInfo())
+          return;
+
+        var title = '<p class="title">' + slider.currSlide.content.attr('data-image_title') + '</p>';
+        rotator.replaceOverlay(slideId, title, true);
+
+        var imageId = slider.currSlide.content.attr('data-image_id');
+        jQuery.ajax({
               type: "GET",
               url: "<?php echo admin_url('admin-ajax.php') ?>",
               dataType: "html",
-              data: ({ action: "get_image_details", pid: pid}),
+              data: ({ action: "get_image_details", pid: imageId}),
               success: function(html) {
                 if (html.length)
-                  replaceOverlayDiv("info", title + html, false);
+                  rotator.replaceOverlay(slideId, title + html, false);
               }
           }
         );
