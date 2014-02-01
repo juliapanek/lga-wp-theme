@@ -504,6 +504,8 @@ footer {
 
 @media(max-width:768px){
 
+	/* MENU */ 
+
 	.normal {
 		font-size: 16px;
 	}
@@ -574,6 +576,48 @@ footer {
 
 	.col-xs-7, .col-lg-7 {
 		padding: 0;
+	}
+
+	/* MENU */ 
+
+	.normal {
+		font-size: 16px;
+	}
+
+	li.menu_main {
+		border-top: 1px solid lightgray;
+		font-size: 25px;
+		padding: 20px 0 20px 0;
+	}
+
+	li.menu_sub {
+		font-size: 25px;
+		padding: 10px 0 0 10px;
+	}
+
+	a {
+		font-size: 25px;
+	}
+
+	h2#studio_menu {
+		border-top: 1px solid rgb(242, 134, 39);
+		padding: 0;
+		margin: 0;
+	}
+
+	h2#project_menu, h2#studio_menu {
+		padding: 20px 0;
+		margin: 0;
+	}
+
+	/* GALLERY NAVIGATION */
+
+	.gallery-arrow {
+		display: none;
+	}
+
+	.gallery-number {
+		display: none;
 	}
 
 
