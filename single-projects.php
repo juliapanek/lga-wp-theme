@@ -13,7 +13,7 @@
 			echo '<ul>';
 			 
 			while (has_sub_field('commercial_institutional')) {
-				echo '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li>';
+				echo '<a href="' . get_sub_field('link') . '">' . '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li></a>';
 		   }
 		   
 			echo '</ul>';
@@ -25,7 +25,7 @@
 			echo '<ul>';
 			 
 			while (has_sub_field('residential')) {
-				echo '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li>';
+				echo '<a href="' . get_sub_field('link') . '">' . '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li></a>';
 		   }
 		   
 			echo '</ul>';
