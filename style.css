@@ -280,6 +280,10 @@ li.menu_sub {
 	padding-left: 10px;
 }
 
+li.menu_sub.active a {
+		color: rgb(141, 67, 19);
+}
+
 li.menu_main:hover, li.menu_sub:hover {
 	color: rgb(242, 134, 39);
 	cursor: pointer;
@@ -289,6 +293,10 @@ li.menu_main:hover, li.menu_sub:hover {
 	-o-transition: color 500ms linear;
 	-ms-transition: color 500ms linear;
 	transition: color 500ms linear;
+}
+
+li.menu_main.active a {
+		color: rgb(141, 67, 19);
 }
 
 /* project list & resume */ 
