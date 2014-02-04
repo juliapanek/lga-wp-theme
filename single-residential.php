@@ -13,7 +13,7 @@
   		<p class="intro"><?php the_field('intro_paragraph_1'); ?></p>
   		<p class="normal"><?php the_field('intro_paragraph_2'); ?></p>
 
-  		<table class="credit">
+  		<table id="credits" class="credit">
 <?php
   			if (get_field('credits')) {
   				//echo '<tr>';
@@ -77,7 +77,7 @@
           rotator.removeOverlay(nextSlideId);
           return;
         }
-        else if (nextSlideId > 0)
+        else if ((nextSlideId > 0) && (nextSlideId < slider.numSlides))
           rotator.beginTransition(nextSlideId);
       }
     );
@@ -93,21 +93,28 @@
         if ((slideId == 0) || !shouldDisplayProcessInfo())
           return;
 
-        var title = '<p class="title">' + slider.currSlide.content.attr('data-image_title') + '</p>';
-        rotator.replaceOverlay(slideId, title, true);
+        if (slideId == slider.numSlides - 1) {
+          var credits = jQuery("#credits");
+          var html = credits.get(0).outerHTML.replace('id="credits" ', '');
+          rotator.replaceOverlay(slideId, html, true);
+        }
+        else {
+          var title = '<p class="title">' + slider.currSlide.content.attr('data-image_title') + '</p>';
+          rotator.replaceOverlay(slideId, title, true);
 
-        var imageId = slider.currSlide.content.attr('data-image_id');
-        jQuery.ajax({
-              type: "GET",
-              url: "<?php echo admin_url('admin-ajax.php') ?>",
-              dataType: "html",
-              data: ({ action: "get_image_details", pid: imageId}),
-              success: function(html) {
-                if (html.length)
-                  rotator.replaceOverlay(slideId, title + html, false);
-              }
-          }
-        );
+          var imageId = slider.currSlide.content.attr('data-image_id');
+          jQuery.ajax({
+                type: "GET",
+                url: "<?php echo admin_url('admin-ajax.php') ?>",
+                dataType: "html",
+                data: ({ action: "get_image_details", pid: imageId}),
+                success: function(html) {
+                  if (html.length)
+                    rotator.replaceOverlay(slideId, title + html, false);
+                }
+            }
+          );
+        }
       }
     );
   });
