@@ -13,7 +13,17 @@
 			echo '<ul>';
 			 
 			while (has_sub_field('commercial_institutional')) {
-				echo '<a href="' . get_sub_field('link') . '">' . '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li></a>';
+				$link = get_sub_field('link');
+				if ($link && (substr($link, -strlen("dummy-post/")) === "dummy-post/"))
+					unset($link);
+
+				if (isset($link))
+				   echo '<a href="' . $link . '">';
+
+				echo '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li>';
+
+				if (isset($link))
+				   echo '</a>';
 		   }
 		   
 			echo '</ul>';
@@ -25,7 +35,17 @@
 			echo '<ul>';
 			 
 			while (has_sub_field('residential')) {
-				echo '<a href="' . get_sub_field('link') . '">' . '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li></a>';
+				$link = get_sub_field('link');
+				if ($link && (substr($link, -strlen("dummy-post/")) === "dummy-post/"))
+					unset($link);
+
+				if (isset($link))
+				   echo '<a href="' . $link . '">';
+
+				echo '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li>';
+
+				if (isset($link))
+				   echo '</a>';
 		   }
 		   
 			echo '</ul>';
