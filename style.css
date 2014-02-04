@@ -416,14 +416,12 @@ a:hover {
 	float: left;
 	margin: 0;
 	padding: 0;
-	width: 150px;
 }
 
 .logo_left {
 	float: right; 
 	margin: 0;
 	padding: 0;
-	width: 150px;
 }
 
 .content {
@@ -635,6 +633,14 @@ footer {
 		display: none;
 	}
 
+	#header-column-2 {
+		padding: 0;
+	}
+
+	#header-column-3 {
+		padding: 0;
+	}
+
 
 }
 
@@ -645,7 +651,11 @@ footer {
 
 	}
 
-	.col-xs-7 {
+	#header-column-2 {
+		padding: 0;
+	}
+
+	#header-column-3 {
 		padding: 0;
 	}
 }
