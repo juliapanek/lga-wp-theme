@@ -2,6 +2,37 @@
   global $pageTitle;
   $pageTitle = 'Full Project List';
   get_header();
+
+  function listProjects($repeaterFieldName)
+  {
+    while (has_sub_field($repeaterFieldName)) {
+      echo '<li class="plist">';
+
+      $link = get_sub_field('link');
+      if ($link && (substr($link, -strlen("dummy-post/")) === "dummy-post/"))
+        unset($link);
+
+      echo '<p>';
+      if (isset($link))
+        echo '<a href="' . $link . '">';
+
+      echo get_sub_field('name');
+
+      if (isset($link))
+        echo '</a>';
+      echo '</p><p>';
+      if (isset($link))
+        echo '<a href="' . $link . '">';
+
+      echo get_sub_field('location');
+
+      if (isset($link))
+        echo '</a>';
+      echo '</p>';
+
+      echo '</li>';
+    }
+  }
 ?>
 
 
@@ -11,21 +42,7 @@
 <?php
 		if (get_field('commercial_institutional')) {
 			echo '<ul>';
-			 
-			while (has_sub_field('commercial_institutional')) {
-				$link = get_sub_field('link');
-				if ($link && (substr($link, -strlen("dummy-post/")) === "dummy-post/"))
-					unset($link);
-
-				if (isset($link))
-				   echo '<a href="' . $link . '">';
-
-				echo '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li>';
-
-				if (isset($link))
-				   echo '</a>';
-		   }
-		   
+			listProjects('commercial_institutional');
 			echo '</ul>';
 		}
 ?>
@@ -33,21 +50,7 @@
 <?php
 		if (get_field('residential')) {
 			echo '<ul>';
-			 
-			while (has_sub_field('residential')) {
-				$link = get_sub_field('link');
-				if ($link && (substr($link, -strlen("dummy-post/")) === "dummy-post/"))
-					unset($link);
-
-				if (isset($link))
-				   echo '<a href="' . $link . '">';
-
-				echo '<li class="noindent plist">' . get_sub_field('name') . '</li><li class="indent last">' . get_sub_field('location') . '</li>';
-
-				if (isset($link))
-				   echo '</a>';
-		   }
-		   
+			listProjects('residential');
 			echo '</ul>';
 		}
 ?>
