@@ -7,11 +7,13 @@
 <div class="content col-xs-12 col-sm-5 col-sm-push-7 col-lg-5 col-lg-push-7">
 	<div class="column-container">
 		<h1 class="title">Address</h1>
-		<p class="normal space"><?php the_field('address_line_1'); ?><br><?php the_field('address_line_2'); ?></p>
+		<p class="normal"><?php the_field('address_line_1'); ?><br><?php the_field('address_line_2'); ?></p>
 		<h1 class="title">Telephone</h1>
-		<p class="normal space"><?php the_field('telephone'); ?></p>
+		<p class="normal"><?php the_field('telephone'); ?></p>
 		<h1 class="title">Email</h1>
-		<?php the_field('email'); ?>
+		<?php $url = get_post_meta( get_the_ID(), 'email', true); ?>
+		<p class="normal"><a href="mailto:<?php echo $url; ?>"><?php echo $url ?></a></p>
+
 	</div>
 </div>
 
@@ -25,4 +27,4 @@
 </div>
 
 <?php get_footer(); ?>
-
+ 

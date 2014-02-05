@@ -20,7 +20,7 @@
 
       if (isset($link))
         echo '</a>';
-      echo '</p><p>';
+      echo '</p><p class="indent">';
 
       echo get_sub_field('location');
 

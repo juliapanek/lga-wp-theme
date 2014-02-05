@@ -8,8 +8,8 @@
 	<div class="column-container">
 	
 		<h1 class="title"><?php the_field('name'); ?></h1>
-		<p class="location"><?php the_field('role'); ?></p>
-		<p class="license"><?php the_field('license'); ?></p>
+		<p class="resume_section"><?php the_field('role'); ?></p>
+		<p class="resume_section"><?php the_field('license'); ?></p>
 
 <?php
 		if (get_field('image')) {
