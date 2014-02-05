@@ -449,7 +449,7 @@ a:hover {
 .left_image_list {
 	width: 46%;
 	float: left;
-	padding: 0 2% 0 2%;
+	padding: 0 4% 0 0;
 }
 
 .right_image_list {
