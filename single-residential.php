@@ -14,6 +14,7 @@
   		<p class="normal"><?php the_field('intro_paragraph_2'); ?></p>
 
   		<table id="credits" class="credit">
+        <h1 class="title">credits</h1>
 <?php
   			if (get_field('credits')) {
   				//echo '<tr>';
