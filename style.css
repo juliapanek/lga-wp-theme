@@ -386,7 +386,6 @@ a:hover {
 
 #menu {
 	float: left;
-	padding: 0;
 	border-top: 1px solid rgb(242, 134, 39);
 }
 
@@ -397,7 +396,6 @@ a:hover {
 
 #menu li {
 	list-style-type: none;
-
 }
 
 #project_menu {
@@ -572,33 +570,17 @@ footer {
 	.logo {
 		display: block;
 	}
-
-	.col-xs-7 {
-		width: 0;
-	}
-
-	#menu {
-		padding-top: 0px;
-	}
-
-	.container {
-		padding: 0 7px;
-	}
 }
 
 @media(max-width:1199px) {
 
 	#menu {
-		padding: 35px 0 0 15px;
+		padding-top: 35px;
 		margin-top: 40px;
 	}
 
 	.column-container {
 		margin: 0;
-		padding: 0;
-	}
-
-	.col-xs-7, .col-lg-7 {
 		padding: 0;
 	}
 
@@ -659,7 +641,6 @@ footer {
 
 	#menu {
 		border-top: none;
-
 	}
 
 	#header-column-2 {
