@@ -12,21 +12,26 @@
   		<p class="intro"><?php the_field('intro_paragraph_1'); ?></p>
   		<p class="normal"><?php the_field('intro_paragraph_2'); ?></p>
 
-  		<table id="credits" class="credit">
-        <h1 class="title">credits</h1>
+<!-- credits -->
+      <div id="credits">
+        <h2 class="title">credits</h2>
+      		<table class="credit">
 <?php
-  			if (get_field('credits')) {
-  				//echo '<tr>';
-  				 
-  				while (has_sub_field('credits')) {
-  					echo '<tr><td class="credit_left credit">' . get_sub_field('role') . '</td><td class="credit_right credit">' . get_sub_field('credit') . '</td></tr>';
-  					// echo '<li class="credit">role = ' . get_sub_field('role') . ', name = ' . get_sub_field('credit') . '</li>';
-  			   }
-  			   
-  				//echo '</tr>';
-  			}
+    			if (get_field('credits')) {
+    				//echo '<tr>';
+    				 
+    				while (has_sub_field('credits')) {
+    					echo '<tr><td class="credit_left credit">' . get_sub_field('role') . '</td><td class="credit_right credit">' . get_sub_field('credit') . '</td></tr>';
+    					// echo '<li class="credit">role = ' . get_sub_field('role') . ', name = ' . get_sub_field('credit') . '</li>';
+    			   }
+    			   
+    				//echo '</tr>';
+    			}
 ?>
-  		</table>
+    		  </table>
+       </div>
+<!-- credits end -->
+
   	</div>
   </div>
 </div>
