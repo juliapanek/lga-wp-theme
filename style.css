@@ -208,7 +208,6 @@ h1.caption_title {
 
 .credit {
 	list-style-type: none;
-	text-transform: uppercase;
 	color: dimgray;
 	font-size: 13px;
 	line-height: 1.2; 
@@ -281,7 +280,7 @@ li.menu_sub {
 }
 
 li.menu_sub.active a {
-		color: rgb(141, 67, 19);
+		color: gray;
 }
 
 li.menu_main:hover, li.menu_sub:hover {
