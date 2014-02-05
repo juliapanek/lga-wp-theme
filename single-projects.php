@@ -20,7 +20,7 @@
 
       if (isset($link))
         echo '</a>';
-      echo '</p><p>';
+      echo '</p><p class="indent">';
       if (isset($link))
         echo '<a href="' . $link . '">';
 
