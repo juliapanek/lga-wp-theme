@@ -56,9 +56,8 @@
     header.append('<p class="gallery-arrow"><a href="#" onclick="slider.next(); return false;">&rarr;</a></p><p class="gallery-arrow"><a href="#" onclick="slider.prev(); return false;">&larr;</a></p>');
 
     function shouldDisplayProcessInfo() {
-      return (jQuery("#info").parents(".content").outerWidth() !=
-              jQuery("#header").outerWidth());
-		}
+      return ((jQuery("#header").width() - jQuery("#info").parents(".content").width()) > 100)
+	}
 
     var rotator = new OverlayRotator("info");
 
