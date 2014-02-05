@@ -599,6 +599,10 @@ footer {
 	.logo {
 		display: block;
 	}
+
+	.projects {
+		padding-left: 20px;
+	}
 }
 
 @media(max-width:1199px) {
