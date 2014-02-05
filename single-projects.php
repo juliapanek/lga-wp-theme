@@ -21,13 +21,9 @@
       if (isset($link))
         echo '</a>';
       echo '</p><p>';
-      if (isset($link))
-        echo '<a href="' . $link . '">';
 
       echo get_sub_field('location');
 
-      if (isset($link))
-        echo '</a>';
       echo '</p>';
 
       echo '</li>';
