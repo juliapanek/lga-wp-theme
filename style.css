@@ -188,7 +188,7 @@ h1.caption_title {
 
 .contact {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
-	font-size: 12px;
+	font-size: 11px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: dimgray;
@@ -260,6 +260,7 @@ h1.caption_title {
 
 h2 {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
+	-webkit-font-smoothing: antialiased;
 	color: rgb(242, 134, 39);
 	font-size: 17px;
 	font-weight:normal;
@@ -534,12 +535,8 @@ table td, table td * {
 }
 
 footer {
-	background-color: whitesmoke;
 	width: 100%;
-}
-
-#footer, #push {
-    height: 5em;
+	padding-top: 80px;
 }
 
 #footer {

@@ -11,8 +11,16 @@
 
 <footer>
 	<div id="footer">
-		<p class="contact">277 Broadway&emsp;Suite 100&emsp;New York&ensp;NY 10007</p>
-		<p class="contact">TEL&ensp;(212) 334-8011&emsp;EMAIL&ensp;info@lesliegill.com</p>
+<?php /*
+      $contactqry = new WP_Query("post_type=contact"); 
+      if ($contactqry->have_posts() ) {
+        while ( $contactqry->have_posts() ) {
+          $contactqry->the_post(); 
+          echo '<p class="contact">' . has_sub_field('address_line_1') . '</p>';  
+        }
+      }
+    wp_reset_postdata();
+?> */ 
 	</div>
 </footer>
 
