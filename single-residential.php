@@ -96,7 +96,7 @@
           rotator.replaceOverlay(slideId, html, true);
         }
         else {
-          var title = '<p class="title">' + slider.currSlide.content.attr('data-image_title') + '</p>';
+          var title = '<h3 class="intro">' + slider.currSlide.content.attr('data-image_title') + '</h3>';
           rotator.replaceOverlay(slideId, title, true);
 
           var imageId = slider.currSlide.content.attr('data-image_id');

@@ -18,6 +18,7 @@ jQuery(document).ready(function($) {
 	});
 
 	$('#people').click(function() {
-		$('.ppl').toggleClass('hide');
+		$('.ppl').addClass('show'); 
+
 	});
 });

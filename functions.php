@@ -70,13 +70,13 @@ function get_image_details() {
   $imageWidth = nggcf_get_field($_GET['pid'], 'Image Width %');
   if (!empty($image)) {
     if (empty($imageWidth))
-      $imageWidth = "100";
-    echo '<img src="' . $image . '" width="' . $imageWidth . '%"></img>';
+      $imageWidth = "75";
+    echo '<img class="process_img" src="' . $image . '" width="' . $imageWidth . '%"></img>';
   }
 
   $caption = nggcf_get_field($_GET['pid'], 'Caption');
   if (!empty($caption))
-    echo '<h2>' . $caption . '</h2>';
+    echo '<h3>' . $caption . '</h3>';
 
   $text = nggcf_get_field($_GET['pid'], 'Process Text');
   if (!empty($text))

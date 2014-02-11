@@ -11,16 +11,16 @@
 
 <footer>
 	<div id="footer">
-<?php /*
-      $contactqry = new WP_Query("post_type=contact"); 
+<?php 
+     /* $contactqry = new WP_Query("post_type=contact"); 
       if ($contactqry->have_posts() ) {
         while ( $contactqry->have_posts() ) {
           $contactqry->the_post(); 
-          echo '<p class="contact">' . has_sub_field('address_line_1') . '</p>';  
+          echo get_field($field_name);  
         }
       }
-    wp_reset_postdata();
-?> */ 
+    wp_reset_postdata(); */ 
+?>  
 	</div>
 </footer>
 
