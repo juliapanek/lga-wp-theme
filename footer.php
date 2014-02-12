@@ -18,7 +18,7 @@
         while ( $query->have_posts() ) {
           $query->the_post();
 ?>
-		  <?php the_field('address_line_1'); ?><?php the_field('address_line_2'); ?><?php the_field('telephone'); ?><?php the_field('email'); ?>
+		  <p class="contact"><?php the_field('address_line_1'); ?></p><p class="contact"><?php the_field('address_line_2'); ?></p><p class="contact"><?php the_field('telephone'); ?> <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></p>
 <?php
         }
       }
