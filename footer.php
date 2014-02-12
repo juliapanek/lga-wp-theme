@@ -12,14 +12,17 @@
 <footer>
 	<div id="footer">
 <?php 
-     /* $contactqry = new WP_Query("post_type=contact"); 
-      if ($contactqry->have_posts() ) {
-        while ( $contactqry->have_posts() ) {
-          $contactqry->the_post(); 
-          echo get_field($field_name);  
+     $query = new WP_Query(array( 'p' => 163, 'post_type' => 'any' ) ); 
+
+      if ($query->have_posts() ) {
+        while ( $query->have_posts() ) {
+          $query->the_post();
+?>
+		  <?php the_field('address_line_1'); ?><?php the_field('address_line_2'); ?><?php the_field('telephone'); ?><?php the_field('email'); ?>
+<?php
         }
       }
-    wp_reset_postdata(); */ 
+    wp_reset_postdata();
 ?>  
 	</div>
 </footer>
