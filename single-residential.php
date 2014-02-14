@@ -114,6 +114,15 @@
         }
       }
     );
+
+    jQuery(window).on('resize', function () {
+        if (this.timeout)
+          this.clearTimeout(this.timeout);
+        this.timeout = this.setTimeout(function() {
+          if (!shouldDisplayProcessInfo())
+            rotator.removeOverlay(0);
+        }, 500);
+    });
   });
 </script>
 
