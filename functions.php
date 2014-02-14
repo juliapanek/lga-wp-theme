@@ -66,20 +66,34 @@ function new_royalslider_add_custom_variables($m, $data, $options) {
 add_filter('new_rs_slides_renderer_helper', 'new_royalslider_add_custom_variables', 10, 4);
 
 function get_image_details() {
-  $image = nggcf_get_field($_GET['pid'], 'Image');
-  $imageHeight = nggcf_get_field($_GET['pid'], 'Image Height');
-  if (!empty($image)) {
-    $imageSize = ' width="75%"';
-    if (!empty($imageHeight))
-      $imageSize = ' height="' . $imageHeight . 'px"';
-    echo '<img class="process_img" src="' . $image . '"' . $imageSize . '></img>';
+  $attachment_id = nggcf_get_field($_GET['pid'], 'Attachment');
+
+  if (!empty($attachment_id)) {
+    $post = get_post($attachment_id);
+    $metadata = wp_get_attachment_metadata($attachment_id, false);
+
+    if (!empty($metadata)) {
+      $image = $metadata['file'];
+      $image_height = $metadata['height'];
+
+      $size_attr = ' max-width="90%"';
+      if (!empty($image_height))
+        $size_attr = $size_attr . ' height="' . $image_height . 'px"';
+
+      echo '<img class="process_img" src="' . wp_upload_dir()['baseurl'] . '/' . $image . '"' . $size_attr . '></img>';
+
+      $caption = $post->post_excerpt;
+      $text = $post->post_content;
+    }
   }
 
-  $caption = nggcf_get_field($_GET['pid'], 'Caption');
+  if (empty($caption))
+    $caption = nggcf_get_field($_GET['pid'], 'Caption');
   if (!empty($caption))
     echo '<h3>' . $caption . '</h3>';
 
-  $text = nggcf_get_field($_GET['pid'], 'Process Text');
+  if (empty($text))
+    $text = nggcf_get_field($_GET['pid'], 'Process Text');
   if (!empty($text))
     echo '<p>' . $text . '</p>';
 
