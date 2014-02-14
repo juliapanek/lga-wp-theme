@@ -4,17 +4,30 @@ function OverlayRotator(baseDivId)
 	this.baseDiv = jQuery("#" + baseDivId);
 
 	var overlayDivId = baseDivId + "-overlay";
+	var heightPadDivId = baseDivId + "-overlay-pad";
 
 	function findCurrentOverlay() {
 		return jQuery("#" + overlayDivId);
 	}
-
 
 	function renameCurrentOverlay() {
 		var overlay = findCurrentOverlay();
 		if (overlay.length)
 			overlay.attr("id", overlayDivId + "-" + Math.random()*1e16);
 		return overlay;
+	}
+
+	function setHeightPad(baseDiv, height) {
+		var heightPadDiv = jQuery("#" + heightPadDivId);
+		if (!heightPadDiv.length)
+			heightPadDiv = baseDiv.after('<div id="' + heightPadDivId + '"></div>');
+		heightPadDiv.height(height);
+	}
+
+	function removeHeightPad() {
+		var heightPadDiv = jQuery("#" + heightPadDivId);
+		if (heightPadDiv.length)
+			heightPadDiv.remove();
 	}
 
 	this.removeOverlay = function(stateId) {
@@ -24,9 +37,10 @@ function OverlayRotator(baseDivId)
 
 		if (overlay.length) {
 			overlay.fadeOut(100, function() {
+					removeHeightPad();
 					overlay.remove();
 				});
-			this.baseDiv.fadeIn(500);
+			this.baseDiv.height("auto").fadeIn(500);
 		}
 	};
 
@@ -61,6 +75,9 @@ function OverlayRotator(baseDivId)
 		newOverlay.innerHTML = newHtml;
 
 		this.baseDiv.after(newOverlay);
+
+		setHeightPad(this.baseDiv, newOverlay.offsetHeight);
+
 		newOverlay = jQuery("#" + newOverlay.getAttribute("id"));
 
 		if (sync)
