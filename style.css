@@ -63,7 +63,7 @@ a:hover {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -5em auto;
+	margin: 0 auto -5em 0;
 }
 
 #container {
@@ -192,7 +192,7 @@ h1.caption_title {
 	font-size: 16px;
 	line-height: 1.4;
 	color: dimgray;
-	margin: 10px 0 80px 0;
+	margin: 10px 0 5em 0;
 }
 
 .caption {
@@ -560,14 +560,12 @@ table td, table td * {
 	border-left: 1px dotted rgb(242, 134, 39);
 }
 
-footer {
-	width: 100%;
-	padding-top: 80px;
+footer, #push {
+	height: 5em;
 }
 
 #footer {
 	background-color: whitesmoke;
-	width: 100%;
 	text-align: left;
 	padding: 1em 1em 1em 1em;
 }
