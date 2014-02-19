@@ -1,4 +1,4 @@
 <?php
-	$expandSubMenu = "institutional";
+	$expand_sub_menu = "institutional";
 	include 'single-residential.php'
 ?>

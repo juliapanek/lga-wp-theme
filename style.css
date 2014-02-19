@@ -2,7 +2,7 @@
 Theme Name: Leslie Gill Architect
 Github Theme URI: https://github.com/juliapanek/lga-wp-theme
 Author: Julia Panek
-*/ 
+*/
 
 html, body {
 	height: 100%;
@@ -13,7 +13,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: rgb(254, 254, 254);
-	font-family: "News Gothic Regular", 'Arial Narrow', sans-serif; 
+	font-family: "News Gothic Regular", 'Arial Narrow', sans-serif;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 16px;
@@ -49,8 +49,9 @@ a:hover {
 	border-top: 2px solid rgb(242, 134, 39);
 }
 
-
 #header h1 {
+	font-family: "News Gothic", 'Arial Narrow', sans-serif;
+	font-weight: normal;
 	font-size: 6px;
 	visibility: hidden;
 }
@@ -76,24 +77,23 @@ a:hover {
 
 /* first for IE 4–8 */
 @font-face {
-  font-family: ScalaWeb;
-  src: url("./fonts/ScalaWeb.eot");
+	font-family: ScalaWeb;
+	src: url("./fonts/ScalaWeb.eot");
 }
 
 /* then for WOFF-capable browsers */
 @font-face {
-  font-family: ScalaWeb;
-  src: url("./fonts/ScalaWeb.woff") format("woff");
+	font-family: ScalaWeb;
+	src: url("./fonts/ScalaWeb.woff") format("woff");
 }
 
-
-p { 
+p {
 	font-family: ScalaWeb, serif;
 	-webkit-font-smoothing: antialiased;
 	font-size: 14px;
-	line-height: 1.6; 
+	line-height: 1.6;
 	margin: 0;
-	color: black; 
+	color: black;
 }
 
 p.indent {
@@ -101,9 +101,8 @@ p.indent {
 	-webkit-font-smoothing: antialiased;
 	font-size: 16px;
 	line-height: 1.3;
-	color: dimgray; 
+	color: dimgray;
 	padding: 0 0 10px 10px;
-
 }
 
 h3 {
@@ -116,8 +115,6 @@ h3 {
 }
 
 .title {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
-	font-weight: normal; 
 	-webkit-font-smoothing: antialiased;
 	font-size: 15px;
 	text-transform: uppercase;
@@ -129,19 +126,14 @@ h3 {
 }
 
 h3.title {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
-	font-weight: normal; 
 	-webkit-font-smoothing: antialiased;
 	color: rgb(242, 134, 39);
 	font-size: 15px;
 	text-transform: none;
 }
 
-
 .location {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	font-size: 13px;
-	font-weight: normal;
 	letter-spacing: 1px;
 	color: gray;
 	padding: 0;
@@ -149,7 +141,6 @@ h3.title {
 }
 
 .license {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -159,7 +150,6 @@ h3.title {
 }
 
 .resume_section, .projects_category {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -169,7 +159,7 @@ h3.title {
 }
 
 li.resume {
-	padding: 0 0 40px 0;
+	padding: 0 0 20px 0;
 }
 
 li a:hover {
@@ -177,17 +167,15 @@ li a:hover {
 }
 
 h1.caption_title {
-	font-family: 'News Gothic Regular', 'Arial Narrow', sans-serif, sans-serif !important;
-    font-style: normal !important;
-    font-weight: normal !important;
+	font-style: normal !important;
 	font-size: 16px;
 	line-height: .5;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	color: dimgray;
 }
+
 .list-img-caption {
-	font-family: 'News Gothic Regular', 'Arial Narrow', sans-serif, sans-serif !important;
 	-webkit-font-smoothing: antialiased;
 	font-size: 16px;
 	line-height: 1.4;
@@ -196,7 +184,6 @@ h1.caption_title {
 }
 
 .caption {
-	font-family: 'News Gothic Regular', 'Arial Narrow', sans-serif, sans-serif !important;
 	-webkit-font-smoothing: antialiased;
 	font-size: 16px;
 	line-height: 1.4;
@@ -205,7 +192,6 @@ h1.caption_title {
 }
 
 .contact {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	font-size: 11px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -233,7 +219,7 @@ h1.caption_title {
 	line-height: 1.5;
 	color: dimgray;
 	margin: 20px 0 0 0;
-	
+
 }
 
 .normal {
@@ -244,11 +230,9 @@ h1.caption_title {
 	color: black;
 	margin: 0;
 	padding: 0;
-	font-weight: normal;
 }
 
 .larger {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	-webkit-font-smoothing: antialiased;
 	font-size: 20px;
 	line-height: 1.5;
@@ -260,7 +244,7 @@ h1.caption_title {
 	list-style-type: none;
 	color: dimgray;
 	font-size: 13px;
-	line-height: 1.2; 
+	line-height: 1.2;
 	padding-bottom: 7px;
 }
 
@@ -281,21 +265,18 @@ h1.caption_title {
 }
 
 h2 {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
+	font-family: "News Gothic", 'Arial Narrow', sans-serif;
+	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
 	color: rgb(242, 134, 39);
 	font-size: 17px;
-	font-weight:normal;
-
 }
 
-/* HEADER */ 
+/* HEADER */
 
 .gallery-number {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	color: black;
 	font-size: 17px;
-	font-weight:normal;
 	float: left;
 	line-height: .8;
 	padding: 0px 8px 0px 4px;
@@ -308,7 +289,7 @@ h2 {
 	line-height: .8;
 	padding: 0px 8px 0px 4px;
 }
- 
+
 .active {
 	color: rgb(242, 134, 39);
 }
@@ -317,21 +298,18 @@ h2 {
 	padding-top: 9px;
 }
 
-/* menu */ 
+/* menu */
 
 li.menu_main, li.menu_sub {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-size: 17px;
 	line-height: 1.3;
 	color: black;
 	list-style-type: none;
 	color: black;
-
 }
 
 li.menu_sub a {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-size: 17px;
 	line-height: 1.3;
@@ -341,7 +319,7 @@ li.menu_sub a {
 }
 
 li.menu_sub.active a {
-		color: gray;
+	color: gray;
 }
 
 li.menu_sub a:hover {
@@ -360,10 +338,10 @@ li.menu_main:hover, li.menu_sub:hover {
 }
 
 li.menu_main.active a {
-		color: gray;
+	color: gray;
 }
 
-/* project list & resume */ 
+/* project list & resume */
 
 li.noindent {
 	font-family: ScalaWeb, serif;
@@ -390,13 +368,13 @@ li.indent {
 	-webkit-font-smoothing: antialiased;
 	font-size: 16px;
 	line-height: 1.3;
-	color: dimgray; 
+	color: dimgray;
 	padding: 0 0 10px 10px;
 	list-style-type: none;
 }
 
 li {
-	list-style-type:  none;
+	list-style-type: none;
 }
 
 a:hover {
@@ -405,10 +383,10 @@ a:hover {
 }
 
 .menu {
-	font-family: "News Gothic Regular", 'Arial Narrow', sans-serif; 
+	font-family: "News Gothic Regular", 'Arial Narrow', sans-serif;
+	font-weight: normal;
 	color: rgb(242, 134, 39);
 	font-size: 17px;
-	font-weight:normal;
 	text-transform: capitalize;
 	line-height: .8;
 	padding: 5px 0 5px 0;
@@ -426,7 +404,6 @@ a:hover {
 }
 
 .menu_options {
-	font-weight: normal;
 	text-transform: capitalize;
 	color: black;
 	padding: 0;
@@ -457,7 +434,6 @@ a:hover {
 #project_menu {
 	margin: 0 0 10px 0;
 	padding: 0;
-
 }
 
 #studio_menu {
@@ -466,7 +442,7 @@ a:hover {
 }
 
 .hide {
-	display: none; 
+	display: none;
 }
 
 .show {
@@ -484,7 +460,7 @@ a:hover {
 }
 
 .logo_left {
-	float: right; 
+	float: right;
 	margin: 0;
 	padding: 0;
 }
@@ -519,8 +495,7 @@ a:hover {
 	margin: 0;
 }
 
-
-/* CV */ 
+/* CV */
 
 table {
 	width: 100%;
@@ -532,13 +507,12 @@ table td {
 }
 
 table td, table td * {
-    vertical-align: top;
+	vertical-align: top;
 }
 
 .credit_left {
 	width: 40%;
 	padding-right: 2%;
-
 }
 
 .credit_right {
@@ -570,10 +544,9 @@ footer, #push {
 	padding: 1em 1em 1em 1em;
 }
 
-@media(max-width:767px){
+@media (max-width: 767px) {
 
-	/* MENU */ 
-
+	/* MENU */
 	.normal {
 		font-size: 16px;
 	}
@@ -626,7 +599,7 @@ footer, #push {
 	}
 }
 
-@media(max-width:1199px) {
+@media (max-width: 1199px) {
 
 	#menu {
 		padding-top: 35px;
@@ -638,8 +611,7 @@ footer, #push {
 		padding: 0;
 	}
 
-	/* MENU */ 
-
+	/* MENU */
 	.normal {
 		font-size: 16px;
 	}
@@ -667,7 +639,6 @@ footer, #push {
 	}
 
 	/* GALLERY NAVIGATION */
-
 	.gallery-arrow {
 		display: none;
 	}
@@ -687,11 +658,9 @@ footer, #push {
 	.projects {
 		margin-top: 0;
 	}
-
-
 }
 
-@media(min-width:1200px){
+@media (min-width: 1200px) {
 
 	#menu {
 		border-top: none;
