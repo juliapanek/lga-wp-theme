@@ -49,10 +49,7 @@ a:hover {
 	border-top: 2px solid rgb(242, 134, 39);
 }
 
-#header h1 {
-	font-family: "News Gothic", 'Arial Narrow', sans-serif;
-	font-weight: normal;
-	font-size: 6px;
+#home-h1 {
 	visibility: hidden;
 }
 

@@ -2,14 +2,12 @@
 <html lang="en">
 
 <head>
-	<title>
-		<?php
+	<title><?php
 			global $page_title;
 			if (!empty($page_title))
 				echo $page_title . ' | ';
 			echo 'Leslie Gill Architect';
-		?>
-	</title>
+	?></title>
 
 	<meta name="description"
 		  content="Leslie Gill Architect is a New York City-based architecture and interior-design firm.">
@@ -40,7 +38,6 @@
 
 <div id="wrapper">
 	<div id="header">
-		<h1>Leslie Gill Architect</h1>
 	</div>
 
 	<div id="container" class="container">
