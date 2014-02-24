@@ -148,6 +148,7 @@ h3.title {
 }
 
 .resume_section, .projects_category {
+	font-family: "News Gothic", 'Arial Narrow', sans-serif;
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
