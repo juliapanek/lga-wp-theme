@@ -46,9 +46,9 @@
 			return;
 
 		var header = jQuery("#header-column-2");
-		header.prepend('<p id="gallery-page-num" class="gallery-number active">1</p><p class="gallery-number">&frasl;</p><p id="gallery-page-count" class="gallery-number">' + slider.numSlides + '</p>');
+		header.prepend('<a href="#" onclick="slider.prev(); return false;"><p id="gallery-page-num" class="gallery-number active">1</p></a><a href="#" onclick="slider.next(); return false;"><p class="gallery-number">&frasl;</p><p id="gallery-page-count" class="gallery-number">' + slider.numSlides + '</p></a>');
 		header = jQuery("#header-column-3");
-		header.append('<p class="gallery-arrow"><a href="#" onclick="slider.next(); return false;">&rarr;</a></p><p class="gallery-arrow"><a href="#" onclick="slider.prev(); return false;">&larr;</a></p>');
+		header.append('<a href="#" onclick="slider.next(); return false;"><p class="gallery-arrow">&rarr;</p></a><a href="#" onclick="slider.prev(); return false;"><p class="gallery-arrow">&larr;</p></a>');
 
 		function shouldDisplayProcessInfo() {
 			return ((jQuery("#header").width() - jQuery("#info").parents(".content").width()) > 100)
