@@ -495,8 +495,6 @@ a:hover {
 	margin: 0;
 }
 
-/* CV */
-
 table {
 	width: 100%;
 	margin-top: 20px;
@@ -518,10 +516,6 @@ table td, table td * {
 .credit_right {
 	width: 58%;
 
-}
-
-.cv_container {
-	margin: 10px 0 0 0;
 }
 
 .projects {
@@ -546,7 +540,6 @@ footer, #push {
 
 @media (max-width: 767px) {
 
-	/* MENU */
 	.normal {
 		font-size: 16px;
 	}
@@ -611,7 +604,6 @@ footer, #push {
 		padding: 0;
 	}
 
-	/* MENU */
 	.normal {
 		font-size: 16px;
 	}
@@ -638,7 +630,6 @@ footer, #push {
 		margin: 0;
 	}
 
-	/* GALLERY NAVIGATION */
 	.gallery-arrow {
 		display: none;
 	}
