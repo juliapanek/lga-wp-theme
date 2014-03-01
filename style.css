@@ -33,6 +33,7 @@ a {
 	color: inherit;
 	font-family: inherit;
 	size: inherit;
+	color: rgb(242, 134, 39);
 }
 
 a:hover {
@@ -136,6 +137,10 @@ h3.title {
 	color: gray;
 	padding: 0;
 	margin: 0;
+}
+
+p.project_name {
+	font-size: 16px;
 }
 
 .license {

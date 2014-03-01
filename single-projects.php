@@ -12,7 +12,7 @@
 			if ($link && (substr($link, -strlen("dummy-post/")) === "dummy-post/"))
 				unset($link);
 
-			echo '<p>';
+			echo '<p class="project_name">';
 
 			if (isset($link))
 				echo '<a href="' . $link . '">';
