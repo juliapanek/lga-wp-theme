@@ -10,7 +10,16 @@
 	?></title>
 
 	<meta name="description"
-		  content="Leslie Gill Architect is a New York City-based architecture and interior-design firm.">
+		  content="<?php
+			global $page_description;
+			if (empty($page_description))
+				echo 'Leslie Gill Architect is a New York City-based architecture and interior-design firm.';
+			else {
+				echo $page_description;
+				echo 'Leslie Gill Architect, a New York City-based architecture and interior-design firm.';
+			}
+	?>">
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 

@@ -1,6 +1,10 @@
 <?php
 	global $page_title;
 	$page_title = get_field('name') . ', ' . get_field('role');
+
+	global $page_description;
+	$page_description = get_field('name') . ' is ' . get_field('role') . ' at ';
+
 	get_header();
 ?>
 
