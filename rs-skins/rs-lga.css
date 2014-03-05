@@ -96,8 +96,6 @@
 	width: 8px;
 	height: 8px;
 	display: inline-block;
-	*display:inline; 
-	*zoom:1;
 	padding: 5px;
 }
 .rsLGA .rsBullet span {
@@ -255,13 +253,8 @@
 	min-width: 72px;
 	border: 1px solid #D9D9DD;
 	text-decoration: none;
-
 	background: #FFF;
 	border-right: none;
-	*display:inline; 
-	*zoom:1;
-	*border-right: 1px solid #d9d9d9;
-	
 }
 .rsLGA .rsTab:first-child {
 	border-top-left-radius: 16px;
@@ -352,7 +345,6 @@
 	background:url(rs-lga.png) no-repeat 0 -32px;
 	background-color: #383838;
 	background-color: rgba(0,0,0,0.75);
-	*background-color: #383838;
 }
 .rsLGA .rsPlayBtn:hover .rsPlayBtnIcon {
 	background-color: rgba(0,0,0,0.9);
@@ -446,12 +438,17 @@
   width: 100%;
   height: auto;
   display: block;
-  border: 5px solid black;
 }
 .rsContentSlider h3,
 .rsContentSlider p {
 	width: 90%;
 	margin-left: 0;
+}
+.rsSlideRoot {
+  border: 5px solid black;
+}
+.rsSlideRoot.noBorder {
+  border: none;
 }
 
 /***************

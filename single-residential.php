@@ -71,8 +71,13 @@
 					rotator.removeOverlay(nextSlideId);
 					return;
 				}
-				else if ((nextSlideId > 0) && (nextSlideId < slider.numSlides))
+				else if ((nextSlideId > 0) && (nextSlideId < slider.numSlides)) {
 					rotator.beginTransition(nextSlideId);
+
+					var nextSlide = slider.slides[nextSlideId];
+					if (nextSlide.content.children("img").attr("src").indexOf("no-border") >= 0)
+					   nextSlide.content.addClass("noBorder"); 
+				}
 			}
 		);
 
