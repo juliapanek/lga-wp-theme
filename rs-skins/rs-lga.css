@@ -446,7 +446,7 @@
   width: 100%;
   height: auto;
   display: block;
-  padding-bottom: 20px;
+  border: 5px solid black;
 }
 .rsContentSlider h3,
 .rsContentSlider p {
@@ -464,3 +464,4 @@
 	top: 17px;
 	
 }
+

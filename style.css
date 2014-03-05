@@ -33,11 +33,18 @@ a {
 	color: inherit;
 	font-family: inherit;
 	size: inherit;
-	color: rgb(242, 134, 39);
 }
 
 a:hover {
 	color: rgb(242, 134, 39);
+}
+
+a.project_link {
+	color: rgb(242, 134, 39);
+}
+
+a.project_link:hover {
+	color: lightgray;
 }
 
 #header {
@@ -480,7 +487,8 @@ a:hover {
 }
 
 .bio_image {
-	width: 50%;
+	width: 300px;
+	height: auto;
 	margin: 15px 0 0 0;
 }
 

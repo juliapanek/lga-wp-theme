@@ -15,7 +15,7 @@
 			echo '<p class="project_name">';
 
 			if (isset($link))
-				echo '<a href="' . $link . '">';
+				echo '<a class="project_link" href="' . $link . '">';
 
 			echo get_sub_field('name');
 
