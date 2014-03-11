@@ -309,6 +309,7 @@ h2 {
 
 .process_img {
 	padding-top: 9px;
+	max-height: 350px;
 }
 
 /* menu */
