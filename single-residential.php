@@ -1,6 +1,11 @@
 <?php
 	global $page_title;
 	$page_title = get_field('name') . ' Project';
+
+	global $page_description;
+	if (!isset($page_description))
+	   $page_description = get_field('name') . ' is a residential architecture project by ';
+
 	get_header();
 ?>
 

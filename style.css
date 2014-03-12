@@ -113,7 +113,6 @@ p.indent {
 h3 {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif; 
 	font-weight: normal; 
-	-webkit-font-smoothing: antialiased;
 	color: dimgray;
 	font-size: 15px;
 	margin: 20px 0 12px 0;
@@ -279,7 +278,6 @@ h1.caption_title {
 h2 {
 	font-family: "News Gothic", 'Arial Narrow', sans-serif;
 	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
 	color: rgb(242, 134, 39);
 	font-size: 17px;
 }
@@ -315,7 +313,6 @@ h2 {
 /* menu */
 
 li.menu_main, li.menu_sub {
-	-webkit-font-smoothing: antialiased;
 	font-size: 17px;
 	line-height: 1.3;
 	color: black;
@@ -324,7 +321,6 @@ li.menu_main, li.menu_sub {
 }
 
 li.menu_sub a {
-	-webkit-font-smoothing: antialiased;
 	font-size: 17px;
 	line-height: 1.3;
 	color: black;

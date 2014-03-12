@@ -1,6 +1,10 @@
 <?php
 	global $page_title;
 	$page_title = get_field('name') . ', ' . get_field('role');
+
+	global $page_description;
+	$page_description = get_field('name') . ' is ' . get_field('role') . ' at ';
+
 	get_header();
 ?>
 
@@ -14,7 +18,7 @@
 		<?php
 			if (get_field('image')) {
 				$image = get_field('image');
-				echo '<img class="bio_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '"/>';
+				echo '<img class="bio_image" src="' . $image['url'] . '" alt="' . $image['alt'] . '" height="' . $image['height'] . 'px"/>';
 			}
 		?>
 		<p class="intro"><?php the_field('bio'); ?></p>
