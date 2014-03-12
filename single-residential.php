@@ -80,8 +80,12 @@
 					rotator.beginTransition(nextSlideId);
 
 					var nextSlide = slider.slides[nextSlideId];
-					if (nextSlide.content.children("img").attr("src").indexOf("no-border") >= 0)
-					   nextSlide.content.addClass("noBorder"); 
+					var caption = nextSlide.content.attr('data-image_title');
+					var noBorder = caption.indexOf("no-border");
+					if (noBorder >= 0) {
+						nextSlide.content.attr('data-image_title', caption.substring(0, noBorder).trim());
+						nextSlide.content.addClass("noBorder");
+					}
 				}
 			}
 		);
