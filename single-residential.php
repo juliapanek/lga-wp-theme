@@ -81,7 +81,7 @@
 
 					var nextSlide = slider.slides[nextSlideId];
 					var caption = nextSlide.content.attr('data-image_title');
-					var noBorder = caption.indexOf("no-border");
+					var noBorder = caption.indexOf("(no border)");
 					if (noBorder >= 0) {
 						nextSlide.content.attr('data-image_title', caption.substring(0, noBorder).trim());
 						nextSlide.content.addClass("noBorder");
