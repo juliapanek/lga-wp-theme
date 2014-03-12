@@ -73,7 +73,7 @@
 .rsLGA.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
 .rsLGA.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
 
-.rsLGA .rsArrowDisabled .rsArrowIcn { opacity: .1 !important; filter: alpha(opacity=20);  *display: none; }
+.rsLGA .rsArrowDisabled .rsArrowIcn { opacity: .1 !important; filter: alpha(opacity=20); }
 
 
 /***************
